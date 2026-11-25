@@ -4,8 +4,11 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "samples | dryrun"
+        description: "samples | dryrun | inspect"
         default: "dryrun"
+      urls:
+        description: "ss.com saites (inspect režīmam)"
+        default: ""
 
 permissions:
   contents: write
@@ -23,6 +26,12 @@ jobs:
       - name: Paraugi
         if: inputs.mode == 'samples'
         run: python tools/fetch_samples.py 2>&1 | tee debug_out_log.txt; mkdir -p debug_out; mv debug_out_log.txt debug_out/log.txt
+      - name: Pārbaudīt konkrētus sludinājumus
+        if: inputs.mode == 'inspect'
+        run: mkdir -p debug_out && python tools/inspect_urls.py
+        env:
+          URLS: ${{ inputs.urls }}
+          DELAY: "0.5"
       - name: Sausais tests (bez paziņojumiem, ar tukšu stāvokli)
         if: inputs.mode == 'dryrun'
         run: |
