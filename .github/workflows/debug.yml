@@ -1,0 +1,46 @@
+name: Diagnostika
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "samples | dryrun"
+        default: "dryrun"
+
+permissions:
+  contents: write
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Paraugi
+        if: inputs.mode == 'samples'
+        run: python tools/fetch_samples.py 2>&1 | tee debug_out_log.txt; mkdir -p debug_out; mv debug_out_log.txt debug_out/log.txt
+      - name: Sausais tests (bez paziņojumiem, ar tukšu stāvokli)
+        if: inputs.mode == 'dryrun'
+        run: |
+          mkdir -p debug_out
+          python auto_monitor.py 2>&1 | tee debug_out/log.txt
+        env:
+          DRY_RUN: "1"
+          DEBUG: "1"
+          STATE_FILE: debug_out/state_test.json
+          REPORT_FILE: debug_out/report.json
+          MAX_PRICE: "37000"
+          SCAN_MAX: "40000"
+      - name: Publicēt rezultātus zarā debug
+        if: always()
+        run: |
+          cd debug_out
+          git init -q -b debug
+          git config user.name "auto-uzraugs"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A && git commit -qm "diagnostika ${{ github.run_id }}"
+          git push -qf "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" debug

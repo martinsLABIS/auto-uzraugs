@@ -32,10 +32,12 @@ NTFY_SERVER = os.getenv("NTFY_SERVER", "https://ntfy.sh").rstrip("/")
 INCLUDE_EV = os.getenv("INCLUDE_EV", "0") == "1"   # 1 = iekļaut arī tīros elektroauto ar 4x4
 DELAY = float(os.getenv("DELAY", "1.5"))            # pauze starp pieprasījumiem (sekundes)
 DEBUG = os.getenv("DEBUG", "0") == "1"
+DRY_RUN = os.getenv("DRY_RUN", "0") == "1"      # 1 = nesūtīt paziņojumus, tikai rakstīt žurnālā
+REPORT_FILE = os.getenv("REPORT_FILE", "")      # ja norādīts – saglabā atrasto auto sarakstu JSON
 STATE_FILE = Path(os.getenv("STATE_FILE", "state.json"))
-FIRST_RUN = not STATE_FILE.exists()
-FULL_SCAN = os.getenv("FULL_SCAN", "0") == "1" or FIRST_RUN
-SS_PAGES = 400 if FULL_SCAN else int(os.getenv("SS_PAGES", "5"))
+STATE_VERSION = 2   # palielina, ja mainās loģika – vecais stāvoklis tiek atmests
+FULL_SCAN = os.getenv("FULL_SCAN", "0") == "1"   # var kļūt True arī load_state() laikā
+SS_PAGES_NORMAL = int(os.getenv("SS_PAGES", "5"))
 SS_RECHECK_LIMIT = int(os.getenv("SS_RECHECK_LIMIT", "60"))
 
 SS_BASE = "https://www.ss.com/lv/transport/cars/sell/"
@@ -50,7 +52,7 @@ HEADERS = {
 # ------------------------------------------------------- atpazīšanas noteikumi
 PLUGIN_RE = re.compile(
     r"plug[\s-]?in|\bphev\b|uzlādējam\w*|lādējam\w* hibr|e-?hybrid|hybrid4|"
-    r"\btfsi ?e\b|\bgte\b|\biv\b|\b\d{2}e\b|\b\d{3} ?d?e\b|\brecharge\b|\bt8\b|"
+    r"\btfsi ?e\b|\bgte\b|\b\d{2}e\b|\b\d{3} ?d?e\b|\brecharge\b|\bt8\b|"
     r"\b4xe\b|\b450h\+|xdrive ?\d{2}e\b|плагин|подзаряжа\w*|подключаем\w* гибрид",
     re.I,
 )
@@ -60,24 +62,30 @@ AWD_RE = re.compile(
     r"полн\w* привод|полноприводн\w*",
     re.I,
 )
+SKODA_IV_RE = re.compile(r"\biV\b")   # reģistrjutīgs: Skoda iV, bet ne Golf IV
+# tīri elektroauto modeļi – nekad nav plug-in hibrīdi
+EV_MODEL_RE = re.compile(
+    r"enyaq|elroq|\bid\.? ?[3-7]\b|e-tron|ioniq ?[56]|\bev[369]\b|model [3ysx]\b|"
+    r"mustang mach|\beqa\b|\beqb\b|\beqc\b|\beqe\b|\bix[13]?\b|\bi[45]\b|xc40 recharge pure|c40", re.I)
 # modeļi, kuru plug-in versijas vienmēr ir ar pilnpiedziņu
 ALWAYS_AWD_RE = re.compile(r"outlander|rav ?4|\bt8\b|nx ?450|\b4xe\b|hybrid4", re.I)
 EV_RE = re.compile(r"elektr\w*|\bev\b|e-tron|\bid\.? ?[4-7]\b|enyaq|электро", re.I)
 # ss.com saraksta rindas norāde, ka vērts atvērt sludinājumu
 SS_HINT_RE = re.compile(
     r"hibr|hybrid|plug|phev|\d[.,]\d\s?H\b|elektr|\d[.,]\d\s?E\b|recharge|\bt8\b|"
-    r"\b4xe\b|tfsi ?e|\bgte\b|\biv\b|\b\d{2,3} ?e\b|гибрид",
+    r"\b4xe\b|tfsi ?e|\bgte\b|\biV\b|\b\d{2,3} ?e\b|гибрид",
     re.I,
 )
 
 
-def classify(text):
-    """Atgriež 'Plug-in 4x4', 'Elektro 4x4' vai None."""
-    plugin = bool(PLUGIN_RE.search(text))
+def classify(text, model=""):
+    """Atgriež 'Plug-in 4x4', 'Elektro 4x4' vai None. model – marka/modelis no saites vai virsraksta."""
+    is_ev_model = bool(EV_MODEL_RE.search(model or text[:80]))
+    plugin = not is_ev_model and bool(PLUGIN_RE.search(text) or SKODA_IV_RE.search(text))
     awd = bool(AWD_RE.search(text)) or (plugin and bool(ALWAYS_AWD_RE.search(text)))
     if plugin and awd:
         return "Plug-in 4x4"
-    if INCLUDE_EV and awd and EV_RE.search(text):
+    if INCLUDE_EV and awd and (is_ev_model or EV_RE.search(text)):
         return "Elektro 4x4"
     return None
 
@@ -112,7 +120,7 @@ def get(url, params=None):
     return None
 
 
-PRICE_RE = re.compile(r"(\d{1,3}(?:[\s\u00a0\u202f]\d{3})+|\d+)(?:[.,]\d{2})?\s*€")
+PRICE_RE = re.compile(r"(\d{1,3}(?:[\s\u00a0\u202f,]\d{3})+|\d+)(?:[.,]\d{2}(?!\d))?\s*€")
 
 
 def parse_prices(text):
@@ -133,12 +141,17 @@ def now_iso():
 
 
 def load_state():
+    global FULL_SCAN
     if STATE_FILE.exists():
         try:
-            return json.loads(STATE_FILE.read_text("utf-8"))
+            st = json.loads(STATE_FILE.read_text("utf-8"))
+            if st.get("version") == STATE_VERSION:
+                return st
+            log("Stāvoklis no vecākas versijas – sāku no jauna")
         except json.JSONDecodeError:
             log("state.json bojāts – sāku no jauna")
-    return {"tracked": {}, "checked": {}}
+    FULL_SCAN = True
+    return {"version": STATE_VERSION, "tracked": {}, "checked": {}}
 
 
 def save_state(state):
@@ -149,7 +162,7 @@ def save_state(state):
 
 
 def notify(title, message, url=None, tags=None, priority=3):
-    if not NTFY_TOPIC:
+    if DRY_RUN or not NTFY_TOPIC:
         log(f"(ntfy nav iestatīts) {title}: {message}")
         return
     payload = {"topic": NTFY_TOPIC, "title": title, "message": message,
@@ -225,17 +238,17 @@ def scan_moller(state, found):
             if "priekšējā piedziņa" in t or "aizmugurējā piedziņa" in t:
                 continue
             key = "moller:" + c["id"]
-            label = classify(c["text"])
+            label = classify(c["text"], c["title"])
             if not label and re.search(r"hibr|elektr|plug|phev", t):
                 cached = state["checked"].get(key)
                 if cached is None:
-                    label = classify(c["text"] + " " + moller_detail_text(c["url"]))
+                    label = classify(c["text"] + " " + moller_detail_text(c["url"]), c["title"])
                     dbg(f"  detaļas {c['title']}: {label}")
                 else:
                     label = cached.get("label")
             state["checked"][key] = {"label": label, "ts": time.time()}
             if label:
-                found[key] = {**c, "label": label, "source": "Moller Auto"}
+                found[key] = {**c, "label": label, "source": "Moller"}
         if min(c["price"] for c in cards) > SCAN_MAX:
             break
     log(f"  pārskatīti {len(seen_ids)} auto")
@@ -249,8 +262,16 @@ def ss_detail(url):
     if not r or "/msg/" not in r.url:
         return None, None
     soup = BeautifulSoup(r.text, "html.parser")
-    box = soup.find(id="msg_div_msg") or soup.find("body") or soup
-    text = box.get_text(" ", strip=True)
+    parts = []
+    box = soup.find(id="msg_div_msg")
+    if box:
+        parts.append(box.get_text(" ", strip=True))
+    else:   # rezerves variants: parametru šūnas un meta apraksts, bez lapas izvēlnēm
+        parts += [td.get_text(" ", strip=True) for td in soup.select("td.ads_opt, td[id^=tdo_]")]
+        meta = soup.find("meta", attrs={"name": "description"})
+        if meta and meta.get("content"):
+            parts.append(meta["content"])
+    text = " ".join(parts)
     price_el = soup.find(id="tdo_8")
     prices = parse_prices(price_el.get_text(" ", strip=True)) if price_el else []
     if not prices:
@@ -271,6 +292,7 @@ def ss_title_from_url(url):
 
 
 def scan_ss(state, found):
+    SS_PAGES = 400 if FULL_SCAN else SS_PAGES_NORMAL
     log(f"ss.com … (līdz {SS_PAGES} lapām)")
     seen = set()
     for page in range(1, SS_PAGES + 1):
@@ -298,21 +320,22 @@ def scan_ss(state, found):
             if not prices or prices[0] > SCAN_MAX:
                 continue
             price = prices[0]
-            label = classify(row_text)
+            model = ss_title_from_url(link)
+            label = classify(row_text, model)
             if not label and SS_HINT_RE.search(row_text):
                 cached = state["checked"].get(key)
                 if cached is None:
                     text, _ = ss_detail(link)
-                    label = classify(row_text + " " + (text or ""))
+                    label = classify(row_text + " " + (text or ""), model)
                     dbg(f"  detaļas {link}: {label}")
                 else:
                     label = cached.get("label")
             state["checked"][key] = {"label": label, "ts": time.time()}
             if label:
-                title = ss_title_from_url(link)
+                title = model
                 year = next((c for c in cells if re.fullmatch(r"(19|20)\d{2}", c)), "")
                 found[key] = {"id": key, "title": f"{title} {year}".strip(), "price": price,
-                              "url": link, "label": label, "source": "ss.com"}
+                              "url": link, "label": label, "source": "SS"}
         dbg(f"ss lapa {page}: {len(rows)} rindas, {page_new} jaunas")
         if page_new == 0:   # aiz pēdējās lapas ss.com rāda atkal pirmo
             break
@@ -370,11 +393,11 @@ def main():
     log(f"Atbilst: {len(matching)} | jauni: {len(new_cars)} | cenas kritumi: {len(drops)}")
 
     if silent:
-        lines = [f"{c['title']} – {fmt_price(c['price'])} ({c['source']})" for c in matching[:15]]
-        more = f"\n… un vēl {len(matching) - 15}" if len(matching) > 15 else ""
+        lines = [f"{c['title']} – {fmt_price(c['price'])}\n{c['url']}" for c in matching[:12]]
+        more = f"\n\n… un vēl {len(matching) - 12}" if len(matching) > 12 else ""
         notify("Auto uzraugs darbojas",
-               f"Atradu {len(matching)} plug-in 4x4 līdz {fmt_price(MAX_PRICE)}.\n"
-               + "\n".join(lines) + more, tags=["white_check_mark"])
+               f"Atradu {len(matching)} plug-in 4x4 līdz {fmt_price(MAX_PRICE)}.\n\n"
+               + "\n\n".join(lines) + more, tags=["white_check_mark"])
     else:
         for c in new_cars:
             notify(f"Jauns: {c['title']}",
@@ -386,6 +409,10 @@ def main():
                    f"· {c['source']}",
                    url=c["url"], tags=["chart_with_downwards_trend"], priority=4)
 
+    if REPORT_FILE:
+        Path(REPORT_FILE).write_text(json.dumps(
+            {"matching": matching, "found_all": list(found.values())},
+            ensure_ascii=False, indent=1), "utf-8")
     save_state(state)
     log("Gatavs.")
 
