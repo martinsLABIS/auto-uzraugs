@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "samples | dryrun | inspect"
+        description: "samples | dryrun | inspect | probe"
         default: "dryrun"
       urls:
         description: "ss.com saites (inspect režīmam)"
@@ -33,6 +33,9 @@ jobs:
           URLS: ${{ inputs.urls }}
           DELAY: "0.5"
           COMPACT: "1"
+      - name: Portālu pārbaude
+        if: inputs.mode == 'probe'
+        run: mkdir -p debug_out && python tools/probe.py
       - name: Sausais tests (bez paziņojumiem, ar tukšu stāvokli)
         if: inputs.mode == 'dryrun'
         run: |
