@@ -1,0 +1,1227 @@
+Sākums 2026-11-25T20:20:50Z | meklējumi: Ģimenes PHEV
+ss.com (līdz 5 lapām) …
+[debug] ss lapa 1: 30 rindas, 30 jaunas
+[debug] ss lapa 2: 30 rindas, 30 jaunas
+[debug] ss lapa 3: 30 rindas, 30 jaunas
+[debug] ss lapa 4: 30 rindas, 30 jaunas
+[debug] ss lapa 5: 30 rindas, 30 jaunas
+  ss.com: 150 sludinājumi, 15 atbilst cenai un gadam
+Moller Auto …
+  Moller Auto: 778 auto līdz cenai
+Autobrava …
+  Autobrava: 56 auto
+MG56 …
+  MG56: 60 pieejami auto
+Mūsa Motors …
+  Mūsa Motors: 202 auto
+Bravoauto …
+  Bravoauto: 83 auto
+[debug]   Ģimenes PHEV: Audi Q5 43500 -> False
+[debug]   Ģimenes PHEV: Nissan X-Trail 17780 -> False
+[debug]   Ģimenes PHEV: Cupra Born 25990 -> False
+[debug]   Ģimenes PHEV: - Ora 300 pro 17950 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 8 20700 -> False
+[debug]   Ģimenes PHEV: Hyundai Kona 18990 -> False
+[debug]   Ģimenes PHEV: Bmw X1 38990 -> False
+[debug]   Ģimenes PHEV: Mercedes E300 32990 -> False
+[debug]   Ģimenes PHEV: Audi Q5 31790 -> False
+[debug]   Ģimenes PHEV: Hyundai Citi 15000 -> False
+[debug]   Ģimenes PHEV: Toyota C-HR 26400 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 8 18500 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia 14900 -> False
+[debug]   Ģimenes PHEV: Kia Ceed 17325 -> False
+[debug]   Ģimenes PHEV: Skoda Kamiq 13450 -> False
+[debug]   Ģimenes PHEV: Honda Civic 5510 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 6410 -> False
+[debug]   Ģimenes PHEV: Fiat Tipo 6810 -> False
+[debug]   Ģimenes PHEV: Kia Optima 7110 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 6250 -> False
+[debug]   Ģimenes PHEV: Volvo XC60 7610 -> False
+[debug]   Ģimenes PHEV: Volkswagen Beetle 7660 -> False
+[debug]   Ģimenes PHEV: Toyota Corolla 8110 -> False
+[debug]   Ģimenes PHEV: Iveco Daily 9160 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 8500 -> False
+[debug]   Ģimenes PHEV: Citroen Berlingo 10160 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 10210 -> False
+[debug]   Ģimenes PHEV: Volvo V60 9250 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 11110 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 9950 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 9950 -> False
+[debug]   Ģimenes PHEV: Kia Cee'd 11410 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia 10450 -> False
+[debug]   Ģimenes PHEV: Skoda Fabia 10500 -> False
+[debug]   Ģimenes PHEV: BMW 320 10500 -> False
+[debug]   Ģimenes PHEV: % Atlaide Hyundai Kona 10900 -> False
+[debug]   Ģimenes PHEV: Volkswagen Touareg 10900 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia 10950 -> False
+[debug]   Ģimenes PHEV: Skoda Scala 12360 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia 11150 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia 11150 -> False
+[debug]   Ģimenes PHEV: Honda HR-V 12460 -> False
+[debug]   Ģimenes PHEV: Kia Sportage 12810 -> False
+[debug]   Ģimenes PHEV: Audi A6 ALLROAD 12860 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia 12910 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 11800 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 11850 -> False
+[debug]   Ģimenes PHEV: Kia Sportage 11950 -> False
+[debug]   Ģimenes PHEV: Renault Espace 13510 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Cross 12500 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 12750 -> False
+[debug]   Ģimenes PHEV: Hyundai Tucson 13960 -> False
+[debug]   Ģimenes PHEV: % Atlaide Renault Kangoo 12750 -> False
+[debug]   Ģimenes PHEV: Skoda Karoq 13960 -> False
+[debug]   Ģimenes PHEV: Audi Q5 12750 -> False
+[debug]   Ģimenes PHEV: Toyota Proace 14160 -> False
+[debug]   Ģimenes PHEV: Audi A4 14160 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 12950 -> False
+[debug]   Ģimenes PHEV: Kia Cee'd 13000 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia 14410 -> False
+[debug]   Ģimenes PHEV: Kia Optima 14510 -> False
+[debug]   Ģimenes PHEV: Audi Q5 14560 -> False
+[debug]   Ģimenes PHEV: Volkswagen Caddy 14285 -> False
+[debug]   Ģimenes PHEV: Kia Sportage 14710 -> False
+[debug]   Ģimenes PHEV: Mercedes-Benz Citan 14383 -> False
+[debug]   Ģimenes PHEV: Ford Puma 14529 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 13750 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 15110 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Roc 13900 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Roc 15110 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 13950 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 15160 -> False
+[debug]   Ģimenes PHEV: Skoda Kamiq 15310 -> False
+[debug]   Ģimenes PHEV: Skoda Superb 15460 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 15510 -> False
+[debug]   Ģimenes PHEV: % Atlaide Audi A4 15560 -> False
+[debug]   Ģimenes PHEV: Jaguar F-Pace 15456 -> False
+[debug]   Ģimenes PHEV: Skoda Fabia 14700 -> False
+[debug]   Ģimenes PHEV: Skoda Fabia 14700 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 15554 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Cross 14700 -> False
+[debug]   Ģimenes PHEV: Skoda Fabia 14750 -> False
+[debug]   Ģimenes PHEV: % Atlaide Volkswagen Golf 15960 -> False
+[debug]   Ģimenes PHEV: Kia Proceed 16010 -> False
+[debug]   Ģimenes PHEV: Hyundai Tucson 15651 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 16110 -> False
+[debug]   Ģimenes PHEV: Subaru Outback 16110 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Cross 16110 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 14900 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 16160 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 14950 -> False
+[debug]   Ģimenes PHEV: Skoda Kamiq 16210 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Cross 16260 -> False
+[debug]   Ģimenes PHEV: Kia Proceed 16360 -> False
+[debug]   Ģimenes PHEV: Toyota Yaris 15250 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 15350 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 16700 -> False
+[debug]   Ģimenes PHEV: Skoda Karoq 16710 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 16810 -> False
+[debug]   Ģimenes PHEV: Skoda Superb 16860 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 15700 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Cross 16960 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia 17110 -> False
+[debug]   Ģimenes PHEV: Volvo V60 17110 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Cross 15900 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 17110 -> False
+[debug]   Ģimenes PHEV: Volkswagen Transporter 15900 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 17110 -> False
+[debug]   Ģimenes PHEV: Nissan X-Trail 15900 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Roc 15950 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Roc 15950 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Cross 17160 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 17160 -> False
+[debug]   Ģimenes PHEV: Volvo V60 15950 -> False
+[debug]   Ģimenes PHEV: Kia Niro 17160 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 17210 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Cross 16150 -> False
+[debug]   Ģimenes PHEV: Audi A6 17660 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 17700 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 17700 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 17700 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 16500 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Roc 17710 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat Alltrack 17710 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 17408 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Cross 17810 -> False
+[debug]   Ģimenes PHEV: Volvo V90 16650 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia 17457 -> False
+[debug]   Ģimenes PHEV: Volvo V60 16700 -> False
+[debug]   Ģimenes PHEV: Volkswagen Touareg 16700 -> False
+[debug]   Ģimenes PHEV: Volkswagen Crafter 16700 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 16750 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 16750 -> False
+[debug]   Ģimenes PHEV: BMW X2 16800 -> False
+[debug]   Ģimenes PHEV: Mitsubishi Outlander 18010 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 16800 -> False
+[debug]   Ģimenes PHEV: Audi A4 16850 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 18110 -> False
+[debug]   Ģimenes PHEV: Honda CR-V 18110 -> False
+[debug]   Ģimenes PHEV: Porsche Cayenne 18110 -> False
+[debug]   Ģimenes PHEV: Volkswagen Taigo 18110 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 16950 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 18160 -> False
+[debug]   Ģimenes PHEV: Skoda Kamiq 16950 -> False
+[debug]   Ģimenes PHEV: BMW 420 16950 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 16950 -> False
+[debug]   Ģimenes PHEV: Volkswagen Caddy 17000 -> False
+[debug]   Ģimenes PHEV: Toyota Corolla 18310 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 18510 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Cross 18510 -> False
+[debug]   Ģimenes PHEV: Volkswagen Caddy 17350 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia 18610 -> False
+[debug]   Ģimenes PHEV: Peugeot 3008 18700 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 18700 -> False
+[debug]   Ģimenes PHEV: Opel Grandland 18700 -> False
+[debug]   Ģimenes PHEV: Volkswagen ID 3 17500 -> False
+[debug]   Ģimenes PHEV: Volkswagen Arteon 17500 -> False
+[debug]   Ģimenes PHEV: Volkswagen Taigo 17500 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 17500 -> False
+[debug]   Ģimenes PHEV: Mercedes-Benz A200 18710 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 17550 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia 18810 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 17650 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 17650 -> False
+[debug]   Ģimenes PHEV: Skoda Karoq 17650 -> False
+[debug]   Ģimenes PHEV: Audi A4 17750 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 17800 -> False
+[debug]   Ģimenes PHEV: Volkswagen Caddy 17800 -> False
+[debug]   Ģimenes PHEV: % Atlaide Skoda Octavia 17800 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 18628 -> False
+[debug]   Ģimenes PHEV: Audi Q7 17850 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia 18676 -> False
+[debug]   Ģimenes PHEV: Volkswagen Amarok 17900 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 17900 -> False
+[debug]   Ģimenes PHEV: % Atlaide Volkswagen Arteon 19110 -> False
+[debug]   Ģimenes PHEV: Subaru Outback 17950 -> False
+[debug]   Ģimenes PHEV: Toyota RAV4 17950 -> False
+[debug]   Ģimenes PHEV: Audi A3 19160 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Roc 17950 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 17950 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 17950 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 18000 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia 19210 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia 18774 -> False
+[debug]   Ģimenes PHEV: Skoda Superb 18774 -> False
+[debug]   Ģimenes PHEV: Skoda Superb 18050 -> False
+[debug]   Ģimenes PHEV: Peugeot 2008 18100 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Cross 18100 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 18872 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 18150 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia 18920 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia 18969 -> False
+[debug]   Ģimenes PHEV: Jeep Grand Cherokee 18250 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 19510 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 19610 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Cross 19610 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 19610 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia 19610 -> False
+[debug]   Ģimenes PHEV: Dacia Duster 19710 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Cross 18500 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia 19710 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 18500 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 19710 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 18500 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia 19311 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia 19810 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Cross 18600 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 19960 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 20010 -> False
+[debug]   Ģimenes PHEV: Mercedes-Benz Vito 19603 -> False
+[debug]   Ģimenes PHEV: % Atlaide Volvo XC90 20110 -> False
+[debug]   Ģimenes PHEV: Mitsubishi Eclipse 20110 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 18950 -> False
+[debug]   Ģimenes PHEV: Citroen C5 20160 -> False
+[debug]   Ģimenes PHEV: Skoda Superb 20160 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Roc 18950 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 20160 -> False
+[debug]   Ģimenes PHEV: Skoda Karoq 18950 -> False
+[debug]   Ģimenes PHEV: Skoda Superb 18950 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 18950 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia 20209 -> False
+[debug]   Ģimenes PHEV: Honda CR-V 20210 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 19750 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 20260 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 19100 -> False
+[debug]   Ģimenes PHEV: Skoda Kamiq 19100 -> False
+[debug]   Ģimenes PHEV: Audi A3 20310 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Roc 19150 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Cross 20360 -> False
+[debug]   Ģimenes PHEV: Skoda Superb 19250 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia 20700 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 20700 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Cross 20700 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 20700 -> False
+[debug]   Ģimenes PHEV: Audi A4 19500 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 20710 -> False
+[debug]   Ģimenes PHEV: Volkswagen Taigo 20710 -> False
+[debug]   Ģimenes PHEV: Volkswagen Taigo 20710 -> False
+[debug]   Ģimenes PHEV: Volkswagen Taigo 20710 -> False
+[debug]   Ģimenes PHEV: Volkswagen Taigo 20710 -> False
+[debug]   Ģimenes PHEV: Skoda Kamiq 20238 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 20335 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Roc 20384 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Cross 20900 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 20900 -> False
+[debug]   Ģimenes PHEV: BMW 318 20910 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia 19700 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Cross 21000 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 21000 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 21010 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 21100 -> False
+[debug]   Ģimenes PHEV: Volkswagen Taigo 21110 -> False
+[debug]   Ģimenes PHEV: Volkswagen Taigo 21110 -> False
+[debug]   Ģimenes PHEV: Volkswagen Taigo 21110 -> False
+[debug]   Ģimenes PHEV: Volkswagen Taigo 21110 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Cross 19900 -> False
+[debug]   Ģimenes PHEV: Peugeot 3008 21160 -> False
+[debug]   Ģimenes PHEV: Volkswagen Crafter 19950 -> False
+[debug]   Ģimenes PHEV: Volkswagen Arteon 19950 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Cross 19950 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia 21210 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 21400 -> False
+[debug]   Ģimenes PHEV: Skoda Karoq 20200 -> False
+[debug]   Ģimenes PHEV: Audi A6 21410 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 21460 -> False
+[debug]   Ģimenes PHEV: Land Rover Discovery Sport 21510 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 21510 -> False
+[debug]   Ģimenes PHEV: Audi A4 21510 -> False
+[debug]   Ģimenes PHEV: Audi A4 21610 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Cross 20450 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Cross 21700 -> False
+[debug]   Ģimenes PHEV: Skoda Karoq 20500 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 21810 -> False
+[debug]   Ģimenes PHEV: Cupra Formentor 21810 -> False
+[debug]   Ģimenes PHEV: Volkswagen Arteon 20650 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 21910 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 20700 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 21910 -> False
+[debug]   Ģimenes PHEV: Audi A5 SPORTBACK 22110 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 20950 -> False
+[debug]   Ģimenes PHEV: Cupra Formentor 22160 -> False
+[debug]   Ģimenes PHEV: Volkswagen Amarok 20950 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia 20950 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 20950 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 20950 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 20950 -> False
+[debug]   Ģimenes PHEV: Skoda Superb 21100 -> False
+[debug]   Ģimenes PHEV: Volkswagen Arteon 22310 -> False
+[debug]   Ģimenes PHEV: Volkswagen Crafter 21150 -> False
+[debug]   Ģimenes PHEV: Skoda Superb 22410 -> False
+[debug]   Ģimenes PHEV: Kia XCeed 22510 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 22510 -> False
+[debug]   Ģimenes PHEV: Skoda Fabia 21994 -> False
+[debug]   Ģimenes PHEV: Skoda Superb 21450 -> False
+[debug]   Ģimenes PHEV: Cupra Formentor 22700 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 22700 -> False
+[debug]   Ģimenes PHEV: Volkswagen Crafter 21500 -> False
+[debug]   Ģimenes PHEV: Volkswagen ID 3 22710 -> False
+[debug]   Ģimenes PHEV: Toyota Yaris 22189 -> False
+[debug]   Ģimenes PHEV: % Atlaide Volkswagen T-Roc 21500 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 21550 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 21550 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia 21700 -> False
+[debug]   Ģimenes PHEV: Hyundai Tucson 22910 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Cross 21750 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Cross 22960 -> False
+[debug]   Ģimenes PHEV: Audi SQ7 23010 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 21900 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Cross 22580 -> False
+[debug]   Ģimenes PHEV: Audi Q5 21900 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Roc 21950 -> False
+[debug]   Ģimenes PHEV: Audi Q5 21950 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 21950 -> False
+[debug]   Ģimenes PHEV: Citroen C4 22050 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 22726 -> False
+[debug]   Ģimenes PHEV: Audi Q5 22050 -> False
+[debug]   Ģimenes PHEV: Toyota Yaris 23360 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia 23410 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Roc 22921 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 23510 -> False
+[debug]   Ģimenes PHEV: Cupra Formentor 23116 -> False
+[debug]   Ģimenes PHEV: Volkswagen Arteon 23116 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 22500 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 23165 -> False
+[debug]   Ģimenes PHEV: Cupra Formentor 23710 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 23165 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 23710 -> False
+[debug]   Ģimenes PHEV: Audi Q2 23710 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 23760 -> False
+[debug]   Ģimenes PHEV: Toyota Yaris 23810 -> False
+[debug]   Ģimenes PHEV: Audi A4 22750 -> False
+[debug]   Ģimenes PHEV: Toyota Yaris 23960 -> False
+[debug]   Ģimenes PHEV: Peugeot 5008 23960 -> False
+[debug]   Ģimenes PHEV: % Atlaide Volkswagen T-Cross 22750 -> False
+[debug]   Ģimenes PHEV: Seat Ateca 24010 -> False
+[debug]   Ģimenes PHEV: Skoda Karoq 23507 -> False
+[debug]   Ģimenes PHEV: Skoda Superb 24060 -> False
+[debug]   Ģimenes PHEV: Toyota RAV4 24110 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Roc 22900 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan Allspace 22900 -> False
+[debug]   Ģimenes PHEV: Audi A6 22900 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia 22900 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Cross 22900 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Cross 22900 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Cross 22900 -> False
+[debug]   Ģimenes PHEV: Cupra Formentor 24110 -> False
+[debug]   Ģimenes PHEV: Skoda Superb 24160 -> False
+[debug]   Ģimenes PHEV: Volkswagen Multivan 22950 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia 23604 -> False
+[debug]   Ģimenes PHEV: Skoda Superb 24160 -> False
+[debug]   Ģimenes PHEV: Volkswagen Arteon 23100 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Roc 23799 -> False
+[debug]   Ģimenes PHEV: Skoda Superb 24360 -> False
+[debug]   Ģimenes PHEV: Volkswagen ID 3 23200 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Roc 23946 -> False
+[debug]   Ģimenes PHEV: Toyota RAV4 24660 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 23450 -> False
+[debug]   Ģimenes PHEV: Cupra Formentor 23450 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat Alltrack 24710 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 23550 -> False
+[debug]   Ģimenes PHEV: Audi Q3 24810 -> False
+[debug]   Ģimenes PHEV: Mercedes-Benz C200 24860 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 24287 -> False
+[debug]   Ģimenes PHEV: Cupra Formentor 23700 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia 24910 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 24960 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 23750 -> False
+[debug]   Ģimenes PHEV: Seat Tarraco 24385 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 25060 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia 25060 -> False
+[debug]   Ģimenes PHEV: BMW 540 23850 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 25110 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 24531 -> False
+[debug]   Ģimenes PHEV: Volkswagen Arteon 24531 -> False
+[debug]   Ģimenes PHEV: Skoda Superb 25110 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan Allspace 25160 -> False
+[debug]   Ģimenes PHEV: Volkswagen Arteon 23950 -> False
+[debug]   Ģimenes PHEV: Skoda Karoq 25160 -> False
+[debug]   Ģimenes PHEV: Audi Q3 24050 -> False
+[debug]   Ģimenes PHEV: Audi Q7 24100 -> False
+[debug]   Ģimenes PHEV: Audi Q3 24100 -> False
+[debug]   Ģimenes PHEV: Audi Q7 24118 -> False
+[debug]   Ģimenes PHEV: Audi A4 25410 -> False
+[debug]   Ģimenes PHEV: Toyota Yaris 25460 -> False
+[debug]   Ģimenes PHEV: Skoda Superb 24250 -> False
+[debug]   Ģimenes PHEV: % Atlaide Land Rover RANGE ROVER EVOQUE 24250 -> False
+[debug]   Ģimenes PHEV: Volkswagen Arteon 25510 -> False
+[debug]   Ģimenes PHEV: Volkswagen Arteon 24922 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 24922 -> False
+[debug]   Ģimenes PHEV: Audi Q5 24350 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 24400 -> False
+[debug]   Ģimenes PHEV: Volvo XC40 24450 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 25700 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia 25107 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 24500 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Cross 25117 -> False
+[debug]   Ģimenes PHEV: Audi E-TRON 24550 -> False
+[debug]   Ģimenes PHEV: Volkswagen ID 3 24650 -> False
+[debug]   Ģimenes PHEV: Audi Q7 24700 -> False
+[debug]   Ģimenes PHEV: Peugeot 408 25312 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 25950 -> False
+[debug]   Ģimenes PHEV: Cupra Formentor 25960 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 24800 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 24800 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Cross 25507 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Roc 24900 -> False
+[debug]   Ģimenes PHEV: Porsche Macan 24900 -> False
+[debug]   Ģimenes PHEV: Audi Q2 24900 -> False
+[debug]   Ģimenes PHEV: Volkswagen ID 3 25507 -> False
+[debug]   Ģimenes PHEV: Volkswagen Arteon 26110 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 24900 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia 26110 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia 25507 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 24900 -> False
+[debug]   Ģimenes PHEV: Cupra Formentor 24900 -> False
+[debug]   Ģimenes PHEV: Audi Q3 26110 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 26110 -> False
+[debug]   Ģimenes PHEV: Volkswagen Taigo 25507 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Roc 24950 -> False
+[debug]   Ģimenes PHEV: Volkswagen Arteon 26160 -> False
+[debug]   Ģimenes PHEV: BMW 320 26160 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 26160 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 24950 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 24950 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 25605 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 26210 -> False
+[debug]   Ģimenes PHEV: BMW 320 26210 -> False
+[debug]   Ģimenes PHEV: Volvo XC40 26310 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 25150 -> False
+[debug]   Ģimenes PHEV: Cupra Formentor 25800 -> False
+[debug]   Ģimenes PHEV: Skoda Superb 26460 -> False
+[debug]   Ģimenes PHEV: Volkswagen Crafter 25300 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 25450 -> False
+[debug]   Ģimenes PHEV: Toyota Proace 25450 -> False
+[debug]   Ģimenes PHEV: Audi Q5 25450 -> False
+[debug]   Ģimenes PHEV: Audi Q3 25466 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan Allspace 26710 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 25500 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 25500 -> False
+[debug]   Ģimenes PHEV: Volvo S60 25550 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan Allspace 26337 -> False
+[debug]   Ģimenes PHEV: Volkswagen Arteon 26483 -> False
+[debug]   Ģimenes PHEV: Cupra Formentor 27110 -> True
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 26483 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 27110 -> False
+[debug]   Ģimenes PHEV: Hyundai Tucson 27110 -> False
+[debug]   Ģimenes PHEV: Cupra Formentor 26532 -> False
+[debug]   Ģimenes PHEV: Volkswagen Crafter 25950 -> False
+[debug]   Ģimenes PHEV: Audi A6 27210 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 27210 -> False
+[debug]   Ģimenes PHEV: Audi A4 26050 -> False
+[debug]   Ģimenes PHEV: Seat Tarraco 26100 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat Alltrack 27360 -> False
+[debug]   Ģimenes PHEV: Audi A4 26200 -> False
+[debug]   Ģimenes PHEV: Audi Q5 27560 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 26400 -> False
+[debug]   Ģimenes PHEV: Volkswagen Arteon 26971 -> False
+[debug]   Ģimenes PHEV: Volkswagen Arteon 26500 -> False
+[debug]   Ģimenes PHEV: Volkswagen Arteon 27068 -> False
+[debug]   Ģimenes PHEV: Audi Q5 26500 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 26550 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 27117 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Roc 26600 -> False
+[debug]   Ģimenes PHEV: Audi Q3 26700 -> False
+[debug]   Ģimenes PHEV: Volkswagen Transporter 26800 -> False
+[debug]   Ģimenes PHEV: Audi A6 28010 -> False
+[debug]   Ģimenes PHEV: Peugeot 3008 27361 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 28060 -> False
+[debug]   Ģimenes PHEV: Audi Q5 26900 -> False
+[debug]   Ģimenes PHEV: BMW 320 27459 -> False
+[debug]   Ģimenes PHEV: Citroen C4 26900 -> False
+[debug]   Ģimenes PHEV: Volkswagen Crafter 26950 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 28160 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 27556 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 27703 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan Allspace 27400 -> False
+[debug]   Ģimenes PHEV: Audi A6 27947 -> False
+[debug]   Ģimenes PHEV: Volkswagen Arteon 27450 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 28660 -> False
+[debug]   Ģimenes PHEV: Volkswagen ID 4 28660 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 27450 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 28700 -> False
+[debug]   Ģimenes PHEV: Audi A4 28044 -> False
+[debug]   Ģimenes PHEV: Volkswagen Arteon 28044 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 28044 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 27500 -> False
+[debug]   Ģimenes PHEV: BMW X3 28710 -> False
+[debug]   Ģimenes PHEV: Audi A5 27500 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 27500 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 27500 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 27550 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 27600 -> False
+[debug]   Ģimenes PHEV: Volkswagen Arteon 27650 -> False
+[debug]   Ģimenes PHEV: Cupra Formentor 27650 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 28910 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 28337 -> False
+[debug]   Ģimenes PHEV: Volkswagen Touareg 29010 -> False
+[debug]   Ģimenes PHEV: Volkswagen ID 3 27850 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 29110 -> False
+[debug]   Ģimenes PHEV: Polestar 2 29110 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 27900 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 27900 -> False
+[debug]   Ģimenes PHEV: Citroen C4 27900 -> False
+[debug]   Ģimenes PHEV: Volkswagen Arteon 28435 -> False
+[debug]   Ģimenes PHEV: Volkswagen Arteon 29110 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 27900 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan Allspace 29160 -> False
+[debug]   Ģimenes PHEV: Kia Sportage 29160 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 29160 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 27950 -> False
+[debug]   Ģimenes PHEV: Cupra Formentor 28532 -> False
+[debug]   Ģimenes PHEV: Audi A6 ALLROAD 29210 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 29210 -> False
+[debug]   Ģimenes PHEV: Volkswagen Arteon 29210 -> False
+[debug]   Ģimenes PHEV: Audi A6 28150 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 28150 -> False
+[debug]   Ģimenes PHEV: Audi Q5 29410 -> False
+[debug]   Ģimenes PHEV: Cupra Formentor 28825 -> False
+[debug]   Ģimenes PHEV: Audi Q3 29510 -> False
+[debug]   Ģimenes PHEV: Audi A6 29510 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 28350 -> False
+[debug]   Ģimenes PHEV: Audi Q7 28922 -> False
+[debug]   Ģimenes PHEV: Cupra Born 28450 -> False
+[debug]   Ģimenes PHEV: Cupra Formentor 28450 -> False
+[debug]   Ģimenes PHEV: Audi Q4 e-tron 28500 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 28500 -> False
+[debug]   Ģimenes PHEV: Audi A6 28600 -> False
+[debug]   Ģimenes PHEV: Volkswagen ID 3 28700 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 30060 -> False
+[debug]   Ģimenes PHEV: Volkswagen ID 4 29410 -> False
+[debug]   Ģimenes PHEV: Audi E-TRON 28900 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 28950 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 28950 -> False
+[debug]   Ģimenes PHEV: Mercedes-Benz C180 30209 -> False
+[debug]   Ģimenes PHEV: Audi Q5 29000 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 29050 -> False
+[debug]   Ģimenes PHEV: Volkswagen Touareg 29050 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 30310 -> False
+[debug]   Ģimenes PHEV: Audi A3 29200 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 29200 -> False
+[debug]   Ģimenes PHEV: Peugeot 3008 30510 -> False
+[debug]   Ģimenes PHEV: Audi Q5 29849 -> False
+[debug]   Ģimenes PHEV: Volkswagen Arteon 29898 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 30810 -> False
+[debug]   Ģimenes PHEV: Cupra Formentor 29650 -> False
+[debug]   Ģimenes PHEV: Volvo XC60 30289 -> False
+[debug]   Ģimenes PHEV: Volkswagen Arteon 30386 -> False
+[debug]   Ģimenes PHEV: Skoda Superb 30386 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 29900 -> True
+[debug]   Ģimenes PHEV: Volkswagen Passat 29900 -> False
+[debug]   Ģimenes PHEV: Audi A4 29900 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 31110 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 29900 -> False
+[debug]   Ģimenes PHEV: Audi A3 29900 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 29950 -> False
+[debug]   Ģimenes PHEV: Audi E-TRON 29950 -> False
+[debug]   Ģimenes PHEV: Volkswagen Touareg 29950 -> True
+[debug]   Ģimenes PHEV: Volkswagen Passat 30100 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 30100 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 30100 -> False
+[debug]   Ģimenes PHEV: Audi Q3 30150 -> False
+[debug]   Ģimenes PHEV: Audi Q5 31410 -> False
+[debug]   Ģimenes PHEV: Audi Q5 30350 -> True
+[debug]   Ģimenes PHEV: Skoda Superb 30874 -> False
+[debug]   Ģimenes PHEV: Volkswagen Crafter 30874 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 31710 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 30650 -> False
+[debug]   Ģimenes PHEV: Audi Q3 30900 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 30900 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia 31362 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Roc 31362 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tayron 30950 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 31050 -> False
+[debug]   Ģimenes PHEV: Audi A6 31100 -> False
+[debug]   Ģimenes PHEV: Volkswagen Touareg 31557 -> False
+[debug]   Ģimenes PHEV: Audi Q5 32310 -> False
+[debug]   Ģimenes PHEV: Audi Q5 32360 -> False
+[debug]   Ģimenes PHEV: Volkswagen Touareg 31350 -> False
+[debug]   Ģimenes PHEV: Tesla Model 3 31350 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 31801 -> False
+[debug]   Ģimenes PHEV: Audi A6 32710 -> False
+[debug]   Ģimenes PHEV: Audi Q5 31500 -> False
+[debug]   Ģimenes PHEV: Volkswagen Arteon 31550 -> False
+[debug]   Ģimenes PHEV: Audi Q5 32810 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 31700 -> False
+[debug]   Ģimenes PHEV: Volkswagen ID 4 33010 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 32338 -> False
+[debug]   Ģimenes PHEV: Audi A7 31900 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 33110 -> False
+[debug]   Ģimenes PHEV: Audi Q5 31900 -> False
+[debug]   Ģimenes PHEV: Audi E-TRON 32200 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 32350 -> False
+[debug]   Ģimenes PHEV: Mercedes-Benz GLC400 33610 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tayron 32500 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 33710 -> False
+[debug]   Ģimenes PHEV: Volkswagen Touareg 33710 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 32923 -> False
+[debug]   Ģimenes PHEV: Audi E-TRON 32500 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 33810 -> False
+[debug]   Ģimenes PHEV: Audi Q5 Sportback 33960 -> False
+[debug]   Ģimenes PHEV: Volkswagen ID 4 32800 -> False
+[debug]   Ģimenes PHEV: Audi Q5 34010 -> False
+[debug]   Ģimenes PHEV: Audi Q5 34010 -> False
+[debug]   Ģimenes PHEV: Audi Q5 34060 -> False
+[debug]   Ģimenes PHEV: Audi A6 32850 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tayron 32900 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 32900 -> False
+[debug]   Ģimenes PHEV: Toyota RAV4 32900 -> False
+[debug]   Ģimenes PHEV: Audi Q7 32900 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 34160 -> False
+[debug]   Ģimenes PHEV: Volkswagen ID 5 32950 -> False
+[debug]   Ģimenes PHEV: Toyota Highlander 33050 -> False
+[debug]   Ģimenes PHEV: Audi A6 33704 -> False
+[debug]   Ģimenes PHEV: Audi Q3 33450 -> False
+[debug]   Ģimenes PHEV: Audi E-TRON 33500 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 34710 -> False
+[debug]   Ģimenes PHEV: Skoda Enyaq IV 33500 -> False
+[debug]   Ģimenes PHEV: Audi A6 33500 -> False
+[debug]   Ģimenes PHEV: Toyota Hilux 34045 -> False
+[debug]   Ģimenes PHEV: Audi Q5 Sportback 34910 -> False
+[debug]   Ģimenes PHEV: Audi Q5 34910 -> False
+[debug]   Ģimenes PHEV: Volkswagen ID 4 33900 -> False
+[debug]   Ģimenes PHEV: BMW 330 34289 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 34289 -> False
+[debug]   Ģimenes PHEV: Mercedes-Benz GLC 300 34289 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 34338 -> False
+[debug]   Ģimenes PHEV: Volkswagen ID 4 33950 -> False
+[debug]   Ģimenes PHEV: Volkswagen ID 4 34050 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 35360 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 35360 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 35360 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tayron 35460 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Roc 35710 -> False
+[debug]   Ģimenes PHEV: Volkswagen Crafter 35710 -> False
+[debug]   Ģimenes PHEV: Audi Q5 35910 -> False
+[debug]   Ģimenes PHEV: Skoda Enyaq 34900 -> False
+[debug]   Ģimenes PHEV: Audi Q5 36110 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 35265 -> False
+[debug]   Ģimenes PHEV: BMW X3 36110 -> False
+[debug]   Ģimenes PHEV: Audi Q3 34900 -> False
+[debug]   Ģimenes PHEV: Audi A3 34900 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat 34950 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tayron 36160 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tayron 34950 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tayron 34950 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 34950 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Roc 34950 -> False
+[debug]   Ģimenes PHEV: Audi A5 35000 -> False
+[debug]   Ģimenes PHEV: Audi Q5 36310 -> False
+[debug]   Ģimenes PHEV: BMW 320 35509 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 36660 -> False
+[debug]   Ģimenes PHEV: Volkswagen Arteon 36660 -> True
+[debug]   Ģimenes PHEV: Audi A6 35500 -> False
+[debug]   Ģimenes PHEV: Volkswagen ID.BUZZ 35650 -> False
+[debug]   Ģimenes PHEV: Renault Trafic 35900 -> False
+[debug]   Ģimenes PHEV: Audi A5 35900 -> False
+[debug]   Ģimenes PHEV: Audi A5 35900 -> False
+[debug]   Ģimenes PHEV: Skoda Karoq 37110 -> False
+[debug]   Ģimenes PHEV: Skoda Superb 36534 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Roc 36826 -> False
+[debug]   Ģimenes PHEV: Audi Q7 37810 -> False
+[debug]   Ģimenes PHEV: Audi A6 36800 -> False
+[debug]   Ģimenes PHEV: Audi Q5 38060 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 38110 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 37217 -> False
+[debug]   Ģimenes PHEV: Skoda Enyaq 36900 -> False
+[debug]   Ģimenes PHEV: Audi Q4 e-tron 36900 -> False
+[debug]   Ģimenes PHEV: Volkswagen Crafter 38160 -> False
+[debug]   Ģimenes PHEV: Tesla Model Y 36950 -> False
+[debug]   Ģimenes PHEV: Volkswagen Touareg 37314 -> False
+[debug]   Ģimenes PHEV: Volkswagen ID.BUZZ 37200 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Roc 37597 -> False
+[debug]   Ģimenes PHEV: Audi Q3 38610 -> False
+[debug]   Ģimenes PHEV: Volkswagen Touareg 37802 -> False
+[debug]   Ģimenes PHEV: Audi E-TRON 37550 -> False
+[debug]   Ģimenes PHEV: Tesla Model Y 39010 -> False
+[debug]   Ģimenes PHEV: Volkswagen ID.BUZZ 37800 -> False
+[debug]   Ģimenes PHEV: Volkswagen ID.BUZZ 37900 -> False
+[debug]   Ģimenes PHEV: Volkswagen Touareg 38000 -> False
+[debug]   Ģimenes PHEV: Audi Q5 39210 -> False
+[debug]   Ģimenes PHEV: Volkswagen Multivan 38750 -> False
+[debug]   Ģimenes PHEV: Volkswagen Touareg 39168 -> False
+[debug]   Ģimenes PHEV: Volkswagen Touareg 39168 -> False
+[debug]   Ģimenes PHEV: Audi E-TRON 38950 -> False
+[debug]   Ģimenes PHEV: Volkswagen Touareg 38950 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tayron 38990 -> False
+[debug]   Ģimenes PHEV: Audi A8 40710 -> False
+[debug]   Ģimenes PHEV: Audi Q5 39550 -> False
+[debug]   Ģimenes PHEV: Audi A8 39600 -> False
+[debug]   Ģimenes PHEV: Volkswagen Multivan 39900 -> False
+[debug]   Ģimenes PHEV: Volkswagen ID 4 39900 -> False
+[debug]   Ģimenes PHEV: Audi Q8 41110 -> False
+[debug]   Ģimenes PHEV: Volkswagen ID 3 39950 -> False
+[debug]   Ģimenes PHEV: Audi SQ8 40000 -> False
+[debug]   Ģimenes PHEV: Audi e-tron S Sportback 41710 -> False
+[debug]   Ģimenes PHEV: Volkswagen Touareg 41710 -> False
+[debug]   Ģimenes PHEV: Volkswagen Multivan 40500 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 40778 -> False
+[debug]   Ģimenes PHEV: Skoda Enyaq IV 40750 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 42160 -> False
+[debug]   Ģimenes PHEV: Audi Q5 40950 -> False
+[debug]   Ģimenes PHEV: Volkswagen Multivan 42210 -> False
+[debug]   Ģimenes PHEV: Audi A6 42700 -> False
+[debug]   Ģimenes PHEV: Volkswagen Touareg 42710 -> False
+[debug]   Ģimenes PHEV: Volkswagen ID 7 41500 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 41803 -> False
+[debug]   Ģimenes PHEV: Volkswagen Multivan 41750 -> False
+[debug]   Ģimenes PHEV: Audi SQ7 41900 -> False
+[debug]   Ģimenes PHEV: Audi Q7 43160 -> False
+[debug]   Ģimenes PHEV: Skoda Enyaq 42200 -> False
+[debug]   Ģimenes PHEV: Audi e-tron S Sportback 43460 -> False
+[debug]   Ģimenes PHEV: Volkswagen ID.BUZZ 42650 -> False
+[debug]   Ģimenes PHEV: Audi Q4 e-tron 43960 -> False
+[debug]   Ģimenes PHEV: Audi A5 42900 -> False
+[debug]   Ģimenes PHEV: BMW i3 44210 -> False
+[debug]   Ģimenes PHEV: Mercedes-Benz GLE 44310 -> False
+[debug]   Ģimenes PHEV: Audi Q7 44360 -> False
+[debug]   Ģimenes PHEV: Volkswagen Touareg 44710 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq 43657 -> False
+[debug]   Ģimenes PHEV: Mercedes-Benz GLC 200 44810 -> False
+[debug]   Ģimenes PHEV: Volkswagen Amarok 43800 -> False
+[debug]   Ģimenes PHEV: Audi Q4 e-tron 43900 -> False
+[debug]   Ģimenes PHEV: Audi A5 43900 -> False
+[debug]   Ģimenes PHEV: Audi Q3 43900 -> False
+[debug]   Ģimenes PHEV: Renault Trafic 44300 -> False
+[debug]   Ģimenes PHEV: BMW 520 45560 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tayron 45700 -> False
+[debug]   Ģimenes PHEV: BMW 520 46110 -> False
+[debug]   Ģimenes PHEV: Volkswagen Caravelle 44900 -> False
+[debug]   Ģimenes PHEV: Volkswagen Caravelle 44900 -> False
+[debug]   Ģimenes PHEV: Audi Q8 45100 -> False
+[debug]   Ģimenes PHEV: Audi Q7 46310 -> False
+[debug]   Ģimenes PHEV: Volkswagen Touareg 45100 -> False
+[debug]   Ģimenes PHEV: BMW 420 45316 -> False
+[debug]   Ģimenes PHEV: Audi Q7 45250 -> False
+[debug]   Ģimenes PHEV: Audi Q7 45650 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 45900 -> False
+[debug]   Ģimenes PHEV: Audi A6 45900 -> False
+[debug]   Ģimenes PHEV: Audi Q7 47160 -> False
+[debug]   Ģimenes PHEV: Volkswagen ID 7 45950 -> False
+[debug]   Ģimenes PHEV: Audi A5 47210 -> False
+[debug]   Ģimenes PHEV: BMW 520 46487 -> False
+[debug]   Ģimenes PHEV: Volkswagen Touareg 48010 -> False
+[debug]   Ģimenes PHEV: Audi E-TRON 46900 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 46975 -> False
+[debug]   Ģimenes PHEV: BMW 520 46950 -> False
+[debug]   Ģimenes PHEV: Volkswagen Amarok 47650 -> False
+[debug]   Ģimenes PHEV: BMW X6 47650 -> False
+[debug]   Ģimenes PHEV: Audi A6 47700 -> False
+[debug]   Ģimenes PHEV: Audi A6 48960 -> False
+[debug]   Ģimenes PHEV: Audi A6 49110 -> False
+[debug]   Ģimenes PHEV: Volkswagen ID 3 48536 -> False
+[debug]   Ģimenes PHEV: Volkswagen Touareg 49450 -> False
+[debug]   Ģimenes PHEV: Volkswagen Touareg 49902 -> False
+[debug]   Ģimenes PHEV: Mercedes-Benz GLE 49900 -> False
+[debug]   Ģimenes PHEV: Audi Q5 49900 -> False
+[debug]   Ģimenes PHEV: Volkswagen Touareg 49950 -> False
+[debug]   Ģimenes PHEV: Audi Q5 52610 -> False
+[debug]   Ģimenes PHEV: Audi A6 52910 -> False
+[debug]   Ģimenes PHEV: Lexus RX 350 51854 -> False
+[debug]   Ģimenes PHEV: Audi Q5 51900 -> False
+[debug]   Ģimenes PHEV: Audi Q5 51900 -> False
+[debug]   Ģimenes PHEV: Audi A6 53410 -> False
+[debug]   Ģimenes PHEV: Audi Q8 54100 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tayron 54869 -> False
+[debug]   Ģimenes PHEV: Audi Q8 56560 -> False
+[debug]   Ģimenes PHEV: Audi Q8 56860 -> False
+[debug]   Ģimenes PHEV: Audi Q8 55750 -> False
+[debug]   Ģimenes PHEV: Volkswagen Amarok 57210 -> False
+[debug]   Ģimenes PHEV: Audi Q8 56900 -> False
+[debug]   Ģimenes PHEV: Audi A6 57490 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tayron 59651 -> False
+[debug]   Ģimenes PHEV: Volkswagen ID.BUZZ 59900 -> False
+[debug]   Ģimenes PHEV: Audi Q8 59900 -> False
+[debug]   Ģimenes PHEV: Volkswagen Touareg 60550 -> False
+[debug]   Ģimenes PHEV: Audi Q7 63173 -> False
+[debug]   Ģimenes PHEV: Audi A6 64400 -> False
+[debug]   Ģimenes PHEV: Audi SQ7 64500 -> False
+[debug]   Ģimenes PHEV: Audi Q7 66110 -> False
+[debug]   Ģimenes PHEV: Audi Q8 e-tron 64900 -> False
+[debug]   Ģimenes PHEV: Audi RS3 66900 -> False
+[debug]   Ģimenes PHEV: Audi Q7 67400 -> False
+[debug]   Ģimenes PHEV: Volkswagen Touareg 68710 -> False
+[debug]   Ģimenes PHEV: Audi Q8 67900 -> True
+[debug]   Ģimenes PHEV: Audi Q8 71500 -> False
+[debug]   Ģimenes PHEV: Audi Q8 Sportback e-tron 72900 -> False
+[debug]   Ģimenes PHEV: Volkswagen Multivan 76460 -> False
+[debug]   Ģimenes PHEV: Audi S8 79900 -> False
+[debug]   Ģimenes PHEV: Audi Q7 79990 -> False
+[debug]   Ģimenes PHEV: Audi Q8 85900 -> True
+[debug]   Ģimenes PHEV: Audi RS Q8 89210 -> False
+[debug]   Ģimenes PHEV: Audi E-TRON 89900 -> False
+[debug]   Ģimenes PHEV: Audi Q8 e-tron 89900 -> False
+[debug]   Ģimenes PHEV: MG ZS Hybrid+ 21490 -> False
+[debug]   Ģimenes PHEV: MG ZS Hybrid+ 21490 -> False
+[debug]   Ģimenes PHEV: MG ZS Hybrid+ 21490 -> False
+[debug]   Ģimenes PHEV: SEAT Leon Sportstourer 20490 -> False
+[debug]   Ģimenes PHEV: SEAT Ateca Style DSG 21990 -> False
+[debug]   Ģimenes PHEV: SEAT Ateca Style DSG 21990 -> False
+[debug]   Ģimenes PHEV: SEAT Tarraco Style 25990 -> False
+[debug]   Ģimenes PHEV: SEAT Tarraco Style 25990 -> False
+[debug]   Ģimenes PHEV: Fiat Doblo Combi 11990 -> False
+[debug]   Ģimenes PHEV: BMW 320E Touring 19990 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq Elegance 20990 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia Combi 17990 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia Combi Ambition 16400 -> False
+[debug]   Ģimenes PHEV: Skoda Fabia 13000 -> False
+[debug]   Ģimenes PHEV: Skoda Enyaq iV 80 22200 -> False
+[debug]   Ģimenes PHEV: Toyota Rav4 Luxury FWD 22490 -> False
+[debug]   Ģimenes PHEV: CUPRA Terramar VZ 36990 -> False
+[debug]   Ģimenes PHEV: Toyota Corolla Hybrid Touring Sport 18490 -> False
+[debug]   Ģimenes PHEV: Skoda Scala MonteCarlo 22490 -> False
+[debug]   Ģimenes PHEV: Volkswagen Touran 7-seat 11990 -> False
+[debug]   Ģimenes PHEV: Toyota Yaris Cross Hybrid 16200 -> False
+[debug]   Ģimenes PHEV: Skoda Scala MonteCarlo 20990 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia Combi Sportline 28000 -> False
+[debug]   Ģimenes PHEV: SEAT Arona FR 15490 -> False
+[debug]   Ģimenes PHEV: Toyota Corolla Hybrid Touring Sport 21990 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia Combi Ambition 15490 -> False
+[debug]   Ģimenes PHEV: CUPRA Formentor 4drive 23490 -> False
+[debug]   Ģimenes PHEV: Audi Q3 14990 -> False
+[debug]   Ģimenes PHEV: SEAT Arona Style DSG 9990 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia Combi 14490 -> False
+[debug]   Ģimenes PHEV: VOLVO V60 Cross Country B5 Awd 32600 -> False
+[debug]   Ģimenes PHEV: CUPRA New Formentor VZ 39990 -> True
+[debug]   Ģimenes PHEV: Dacia Duster 19990 -> False
+[debug]   Ģimenes PHEV: CUPRA Terramar VZ 40990 -> False
+[debug]   Ģimenes PHEV: SEAT Tarraco Xperience 20990 -> False
+[debug]   Ģimenes PHEV: Toyota Corolla Sedan 14990 -> False
+[debug]   Ģimenes PHEV: Skoda Kamiq Ambition MT 15990 -> False
+[debug]   Ģimenes PHEV: CUPRA Terramar 150 36990 -> False
+[debug]   Ģimenes PHEV: Skoda Kodiaq Elegance 26490 -> False
+[debug]   Ģimenes PHEV: Peugeot 2008 GT line 16990 -> False
+[debug]   Ģimenes PHEV: Mercedes-Benz GLC 350D 4MATIC 19990 -> False
+[debug]   Ģimenes PHEV: Skoda Octavia Combi Ambition 16990 -> False
+[debug]   Ģimenes PHEV: MG S5 EV 33990 -> False
+[debug]   Ģimenes PHEV: CUPRA Terramar VZ 37990 -> False
+[debug]   Ģimenes PHEV: Nissan X-Trail Tekna AT 18490 -> False
+[debug]   Ģimenes PHEV: SEAT Ateca Xcellence 4drive 18990 -> False
+[debug]   Ģimenes PHEV: CUPRA Terramar 150 33990 -> False
+[debug]   Ģimenes PHEV: CUPRA Born 150 kW 58 kWh 18890 -> False
+[debug]   Ģimenes PHEV: Nissan Qashqai Acenta 19990 -> False
+[debug]   Ģimenes PHEV: CUPRA Ateca 300 29490 -> False
+[debug]   Ģimenes PHEV: Hyundai Tucson 14490 -> False
+[debug]   Ģimenes PHEV: CUPRA Born 150 kW 58 kWh 28990 -> False
+[debug]   Ģimenes PHEV: CUPRA Born 150 kW 58 kWh 31490 -> False
+[debug]   Ģimenes PHEV: CUPRA Formentor 190 4Drive 25990 -> False
+[debug]   Ģimenes PHEV: SEAT Tarraco Style 28490 -> False
+[debug]   Ģimenes PHEV: CUPRA Ateca 190 4drive 36490 -> False
+[debug]   Ģimenes PHEV: Mercedes-Benz GLS 450 d 4MATIC AMG Line AIRMATIC 7 Seats Burmester Mild Hybrid Graphite Grey 109000 -> False
+[debug]   Ģimenes PHEV: Mercedes-Benz GLE 350 e 4MATIC PHEV AMG Line Night Package Mojave Silver Metallic 41900 -> False
+[debug]   Ģimenes PHEV: Porsche Cayenne S Sport Chrono SportDesign Lightweight Sport Package 69900 -> False
+[debug]   Ģimenes PHEV: Porsche Taycan 4 Cross Turismo Performance 56900 -> False
+[debug]   Ģimenes PHEV: BMW X5 xDrive40i G05 M Sport Pro Harman/Kardon Skyscraper Grey Metallic 79900 -> False
+[debug]   Ģimenes PHEV: BMW X5 xDrive40i G05 M Sport Pneimo Integral Active Steering Panorama Harman/Kardon Skyscraper Grey Metallic 79900 -> False
+[debug]   Ģimenes PHEV: BMW X5 xDrive30d G05 M Sport MHEV Sky Lounge Harman/Kardon Dravit Grey Metallic 69900 -> False
+[debug]   Ģimenes PHEV: BMW X5 xDrive30d G05 M Sport Pneimo Harman/Kardon Mineral White Metallic 39990 -> False
+[debug]   Ģimenes PHEV: BMW X5 xDrive30d G05 M Sport Pneimo Integral Active Steering Panorama Harman/Kardon Arctic Grey Brilliant Effect Metallic 36900 -> False
+[debug]   Ģimenes PHEV: BMW X4 xDrive20d G02 M Sport Alpinweiss 3 26900 -> False
+[debug]   Ģimenes PHEV: BMW X3 x-Drive30e M-Sport Package Plug-in Hybrid M-Sport Seats 36900 -> False
+[debug]   Ģimenes PHEV: BMW X3 xDrive30e G01 PHEV Laserlight ACC Harman/Kardon Schwarz II 29900 -> False
+[debug]   Ģimenes PHEV: BMW X2 xDrive20d U10 M Sport MHEV Harman/Kardon Cape York Green Metallic 43900 -> False
+[debug]   Ģimenes PHEV: BMW X2 xDrive20d U10 M Sport MHEV Iconic Glow Black Sapphire Metallic 42900 -> False
+[debug]   Ģimenes PHEV: BMW X2 xDrive20d U10 M Sport MHEV Panorama Harman/Kardon Portimao Blue 42900 -> False
+[debug]   Ģimenes PHEV: BMW iX 50 M-Sport Package x-Drive 72900 -> False
+[debug]   Ģimenes PHEV: BMW iX xDrive50 Sport Package Full Options Mineral-weiss Metallic 67900 -> False
+[debug]   Ģimenes PHEV: BMW iX xDrive40 Sky Lounge Soft Close B&W Diamond Full Options Mineral White Metallic 51900 -> False
+[debug]   Ģimenes PHEV: BMW 540d xDrive G60 M Sport Pro MHEV Iconic Glow Sophisto Grey Brilliant Metallic 63900 -> False
+[debug]   Ģimenes PHEV: BMW 520d xDrive Touring G61 M Sport Pro MHEV Merino Webasto Harman/Kardon Oxide Grey II Metallic 48990 -> False
+[debug]   Ģimenes PHEV: BMW 530e Touring G31 M Sport Harman/Kardon Sophisto Grey Brilliant Metallic 31900 -> False
+[debug]   Ģimenes PHEV: BMW 520d xDrive Touring G31 Sport Line Black II 17900 -> False
+[debug]   Ģimenes PHEV: BMW 525d Touring F11 M Sport Webasto Sophisto Grey Brilliant Effect Metallic 9990 -> False
+[debug]   Ģimenes PHEV: BMW i4 M50 G26 350kW M Sport Pro Harman/Kardon Black Sapphire Metallic 49900 -> False
+[debug]   Ģimenes PHEV: BMW i4 eDrive40 G26 M Sport Laserlight ACC Harman/Kardon Brooklyn Grey Metallic 38900 -> False
+[debug]   Ģimenes PHEV: BMW 420d xDrive Gran Coupé M Sport Pro Webasto Individual Merino Mineral White Metallic 44900 -> False
+[debug]   Ģimenes PHEV: BMW 420d xDrive Gran Coupé G26 MHEV M Sport Pro Webasto DAP Pro Harman/Kardon Black Sapphire Metallic 44700 -> False
+[debug]   Ģimenes PHEV: BMW 425d Coupe F32 M Sport Adaptive M Alpine White III 15990 -> False
+[debug]   Ģimenes PHEV: BMW 318i e90 Titan Silver Metallic 4650 -> False
+[debug]   Ģimenes PHEV: BMW M2 Coupe Competition 44900 -> False
+[debug]   Ģimenes PHEV: BMW 218i Active Tourer U06 M Sport Individual Harman/Kardon Sanremo Green Metallic 29990 -> False
+[debug]   Ģimenes PHEV: BMW 218i Active Tourer U06 M Sport Harman/Kardon Alpine White III 28990 -> False
+[debug]   Ģimenes PHEV: Audi e-tron S quattro Air Suspension B&O Night Vision Daytona Grey Pearl Effect 41900 -> False
+[debug]   Ģimenes PHEV: Audi Q5 55 TFSI E-Tron Quattro Facelift S-Line AIRMATIC B&O Quantum Grey 35900 -> False
+[debug]   Ģimenes PHEV: Audi Q5 2.0 TFSI quattro S line B&O Daytona Grey Pearl Effect 14990 -> False
+[debug]   Ģimenes PHEV: Audi Q5 2.0 TFSI quattro S line Panorama Navi Plus Glacier White Metallic 14990 -> False
+[debug]   Ģimenes PHEV: Audi A6 Avant 2.0 TFSI S line Glacier White Metallic 12900 -> False
+[debug]   Ģimenes PHEV: Audi A6 2.0 TFSI Night Blue Pearl Effect 2990 -> False
+[debug]   Ģimenes PHEV: Audi A5 Sportback 2.0 TFSI quattro S line ACC B&O Misano Red Pearlescent 12900 -> False
+[debug]   Ģimenes PHEV: Audi A5 Coupé 1.8 TFSI S line Brilliant Red 7690 -> False
+[debug]   Ģimenes PHEV: Audi A4 1.8 TFSI S line plus Daytona Grey Pearlescent 11990 -> False
+[debug]   Ģimenes PHEV: Audi A4 Avant 2.0 TDI S line Webasto Daytona Grey Pearlescent 10900 -> False
+[debug]   Ģimenes PHEV: Audi A4 allroad quattro "Audi Exclusive" 2.0 TFSI Webasto Phantom Black Pearlescent 9900 -> False
+[debug]   Ģimenes PHEV: Audi A4 Avant 1.8 2012 TFSI Phantom Black Pearlescent 5990 -> False
+[debug]   Ģimenes PHEV: Audi A4 Avant 1.8 TFSI S line Daytona Grey Pearlescent 6390 -> False
+[debug]   Ģimenes PHEV: Volvo EX30 Ultra Twin AWD 66 kWh 360° Harman/Kardon Cloud Blue 37900 -> False
+[debug]   Ģimenes PHEV: Volvo V60 Cross Country D3 AWD Momentum+ Pebble Grey Metallic 18900 -> False
+[debug]   Ģimenes PHEV: Volkswagen Touareg 3.0 TDI 4MOTION Discover Pro Silicon Grey Metallic 35990 -> False
+[debug]   Ģimenes PHEV: VW Passat Variant 1.8 TSI Highline R-Line ErgoComfort Massage LED Deep Black Pearl Effect 11990 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 2.0 TDI 4Motion DSG R-Line/CUP Silver Leaf Metallic 10990 -> False
+[debug]   Ģimenes PHEV: Kia Sorento 2.2 CRDi AWD Aurora Black Pearl 46900 -> False
+[debug]   Ģimenes PHEV: Range Rover Evoque S 2.0D MHEV AWD Seoul Pearl Silver 26900 -> False
+[debug]   Ģimenes PHEV: Jeep Grand Cherokee Overland Quadra-Drive II Alpine Diamond Black Crystal 16990 -> False
+[debug]   Ģimenes PHEV: Tesla Model Y RWD 220kW 62kWh Autopilot Premium Connectivity Pearl White 32900 -> False
+[debug]   Ģimenes PHEV: Tesla Model Y RWD 62 kWh Autopilot Premium Connectivity Solid Black 29990 -> False
+[debug]   Ģimenes PHEV: Peugeot 508 SW 1.5 Diesel Allure Pack Artense Grey Metallic 15900 -> False
+[debug]   Ģimenes PHEV: Ford Focus ST 2.0 EcoBoost Recaro Manual Stealth 11900 -> False
+[debug]   Ģimenes PHEV: Škoda Superb Combi 1.6 TDI Xenon AFS Business Grey Metallic 11990 -> False
+[debug]   Ģimenes PHEV: Mercedes-Benz eSprinter High Roof Arctic White 21800 -> False
+[debug]   Ģimenes PHEV: Volkswagen Transporter T6.1 2.0 TDI App-Connect Candy White 16990 -> False
+[debug]   Ģimenes PHEV: Seat Citi 21595 -> False
+[debug]   Ģimenes PHEV: Renault Clio 11995 -> False
+[debug]   Ģimenes PHEV: Peugeot 308 15990 -> False
+[debug]   Ģimenes PHEV: Renault Austral 28770 -> False
+[debug]   Ģimenes PHEV: BMW 320 23970 -> False
+[debug]   Ģimenes PHEV: Toyota Corolla 15900 -> False
+[debug]   Ģimenes PHEV: Hyundai Tucson 22990 -> False
+[debug]   Ģimenes PHEV: Audi Q5 32000 -> True
+[debug]   Ģimenes PHEV: Volvo XC90 69900 -> False
+[debug]   Ģimenes PHEV: Volvo XC40 27900 -> False
+[debug]   Ģimenes PHEV: BMW X4 49900 -> False
+[debug]   Ģimenes PHEV: Citroen C5X 18990 -> False
+[debug]   Ģimenes PHEV: Rezervēts Volkswagen ID4 24990 -> False
+[debug]   Ģimenes PHEV: Audi Q5 27900 -> False
+[debug]   Ģimenes PHEV: Rezervēts Citroen C4 21990 -> False
+[debug]   Ģimenes PHEV: Rezervēts Lexus UX 22900 -> False
+[debug]   Ģimenes PHEV: Volvo XC60 32500 -> False
+[debug]   Ģimenes PHEV: Volvo S90 32900 -> False
+[debug]   Ģimenes PHEV: Volvo XC60 10900 -> False
+[debug]   Ģimenes PHEV: Volvo XC60 27900 -> False
+[debug]   Ģimenes PHEV: Volkswagen ID4 28990 -> False
+[debug]   Ģimenes PHEV: Citroen C4 7990 -> False
+[debug]   Ģimenes PHEV: Škoda Karoq 17900 -> False
+[debug]   Ģimenes PHEV: Škoda Karoq 19900 -> False
+[debug]   Ģimenes PHEV: BMW 320 23900 -> False
+[debug]   Ģimenes PHEV: Audi Allroad 28900 -> False
+[debug]   Ģimenes PHEV: Volkswagen Touareg 45000 -> False
+[debug]   Ģimenes PHEV: Atlaide Lancia Ypsilon 22490 -> False
+[debug]   Ģimenes PHEV: Cupra Born 19900 -> False
+[debug]   Ģimenes PHEV: Škoda Karoq 18900 -> False
+[debug]   Ģimenes PHEV: Suzuki SX4 16390 -> False
+[debug]   Ģimenes PHEV: Atlaide Renault Koleos 16990 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat Alltrack 17000 -> False
+[debug]   Ģimenes PHEV: Ford Kuga 13900 -> False
+[debug]   Ģimenes PHEV: BMW 520 28900 -> False
+[debug]   Ģimenes PHEV: Citroen C3 21990 -> False
+[debug]   Ģimenes PHEV: Rezervēts Volkswagen ID3 26990 -> False
+[debug]   Ģimenes PHEV: Volkswagen Touareg 44900 -> False
+[debug]   Ģimenes PHEV: Volvo V90 21900 -> False
+[debug]   Ģimenes PHEV: Opel Corsa 7990 -> False
+[debug]   Ģimenes PHEV: Atlaide Opel Mokka 14500 -> False
+[debug]   Ģimenes PHEV: Toyota RAV 4 26900 -> False
+[debug]   Ģimenes PHEV: Lynk & Co  01 29900 -> False
+[debug]   Ģimenes PHEV: Volvo XC40 32900 -> False
+[debug]   Ģimenes PHEV: Volvo XC60 35900 -> False
+[debug]   Ģimenes PHEV: Škoda Kodiaq 24195 -> False
+[debug]   Ģimenes PHEV: BMW 540 23980 -> False
+[debug]   Ģimenes PHEV: Volvo XC60 35900 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Cross 16300 -> False
+[debug]   Ģimenes PHEV: Rezervēts Citroen C4 21490 -> False
+[debug]   Ģimenes PHEV: Atlaide Peugeot 2008 21990 -> False
+[debug]   Ģimenes PHEV: Rezervēts Hyundai ioniq 25995 -> False
+[debug]   Ģimenes PHEV: Rezervēts Citroen C5 Aircross 17990 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Roc 25895 -> False
+[debug]   Ģimenes PHEV: Nissan Qashqai 15990 -> False
+[debug]   Ģimenes PHEV: Toyota Corolla 15900 -> False
+[debug]   Ģimenes PHEV: Volvo S60 34900 -> False
+[debug]   Ģimenes PHEV: Rezervēts Volvo S60 34900 -> False
+[debug]   Ģimenes PHEV: Volvo XC40 32900 -> False
+[debug]   Ģimenes PHEV: Volvo XC40 32900 -> False
+[debug]   Ģimenes PHEV: Volvo EX30 39900 -> False
+[debug]   Ģimenes PHEV: Rezervēts Peugeot 2008 20990 -> False
+[debug]   Ģimenes PHEV: Demo Dacia Citi 27895 -> False
+[debug]   Ģimenes PHEV: Demo Renault 5 26995 -> False
+[debug]   Ģimenes PHEV: Rezervēts Dacia Sandero 13995 -> False
+[debug]   Ģimenes PHEV: Rezervēts Dacia Dokker 7995 -> False
+[debug]   Ģimenes PHEV: Atlaide Hyundai ioniq 42990 -> False
+[debug]   Ģimenes PHEV: Atlaide Hyundai ioniq 32990 -> False
+[debug]   Ģimenes PHEV: Volvo V90 21900 -> False
+[debug]   Ģimenes PHEV: Volvo XC90 38900 -> False
+[debug]   Ģimenes PHEV: Hyundai Tucson 23990 -> False
+[debug]   Ģimenes PHEV: Volkswagen Touran 17500 -> False
+[debug]   Ģimenes PHEV: Renault Arkana 21780 -> False
+[debug]   Ģimenes PHEV: Volvo S60 34900 -> False
+[debug]   Ģimenes PHEV: Atlaide Hyundai Tucson 18990 -> False
+[debug]   Ģimenes PHEV: Demo Dacia Sandero 16900 -> False
+[debug]   Ģimenes PHEV: Škoda Karoq 17500 -> False
+[debug]   Ģimenes PHEV: Rezervēts Atlaide Škoda Karoq 21990 -> False
+[debug]   Ģimenes PHEV: Dacia Duster 18295 -> False
+[debug]   Ģimenes PHEV: Rezervēts Volvo XC40 36000 -> False
+[debug]   Ģimenes PHEV: Toyota RAV 4 23600 -> False
+[debug]   Ģimenes PHEV: Atlaide Kia Niro 24990 -> False
+[debug]   Ģimenes PHEV: Volvo XC40 15900 -> False
+[debug]   Ģimenes PHEV: Volvo V60 9490 -> False
+[debug]   Ģimenes PHEV: Volvo V60 30900 -> False
+[debug]   Ģimenes PHEV: Škoda Kodiaq 19900 -> False
+[debug]   Ģimenes PHEV: Škoda Superb 28900 -> False
+[debug]   Ģimenes PHEV: Rezervēts Atlaide Volkswagen Tiguan 13990 -> False
+[debug]   Ģimenes PHEV: Atlaide Škoda Karoq 14990 -> False
+[debug]   Ģimenes PHEV: Renault Koleos 21900 -> False
+[debug]   Ģimenes PHEV: Rezervēts Audi A4 14595 -> False
+[debug]   Ģimenes PHEV: Seat Ateca 16980 -> False
+[debug]   Ģimenes PHEV: Rezervēts Škoda Octavia 26995 -> False
+[debug]   Ģimenes PHEV: Atlaide Hyundai Tucson 24990 -> False
+[debug]   Ģimenes PHEV: Audi Q5 27900 -> False
+[debug]   Ģimenes PHEV: Škoda Superb 18500 -> False
+[debug]   Ģimenes PHEV: Atlaide Hyundai Tucson 24590 -> False
+[debug]   Ģimenes PHEV: Rezervēts Atlaide Opel Mokka 18490 -> False
+[debug]   Ģimenes PHEV: Atlaide Opel Insignia 8490 -> False
+[debug]   Ģimenes PHEV: Atlaide Renault Clio 14990 -> False
+[debug]   Ģimenes PHEV: Rezervēts Jaguar XF 6900 -> False
+[debug]   Ģimenes PHEV: Volkswagen Touareg 29900 -> False
+[debug]   Ģimenes PHEV: BMW X5 21900 -> False
+[debug]   Ģimenes PHEV: Hyundai Tucson 9200 -> False
+[debug]   Ģimenes PHEV: Rezervēts Audi E-tron 20900 -> False
+[debug]   Ģimenes PHEV: Mercedes GLC 250 26900 -> False
+[debug]   Ģimenes PHEV: Renault Austral 27495 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Cross 16900 -> False
+[debug]   Ģimenes PHEV: Rezervēts Atlaide Peugeot 208 19990 -> False
+[debug]   Ģimenes PHEV: Rezervēts Peugeot 2008 17990 -> False
+[debug]   Ģimenes PHEV: Volvo V40 10400 -> False
+[debug]   Ģimenes PHEV: Atlaide Audi E-tron 28990 -> False
+[debug]   Ģimenes PHEV: Rezervēts Seat Leon 18595 -> False
+[debug]   Ģimenes PHEV: Dacia Duster 15295 -> False
+[debug]   Ģimenes PHEV: BMW 520 29900 -> False
+[debug]   Ģimenes PHEV: Rezervēts Seat Leon 18895 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 8 14200 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat (B8) 16200 -> False
+[debug]   Ģimenes PHEV: Dacia Sandero 12295 -> False
+[debug]   Ģimenes PHEV: Atlaide Hyundai ioniq 26990 -> False
+[debug]   Ģimenes PHEV: Atlaide Citroen C3 20990 -> False
+[debug]   Ģimenes PHEV: Volvo XC90 16900 -> False
+[debug]   Ģimenes PHEV: Rezervēts Renault Megane 10995 -> False
+[debug]   Ģimenes PHEV: Toyota Highlander 33900 -> False
+[debug]   Ģimenes PHEV: Opel Mokka 13990 -> False
+[debug]   Ģimenes PHEV: Volvo XC40 21500 -> False
+[debug]   Ģimenes PHEV: Nissan Qashqai 9900 -> False
+[debug]   Ģimenes PHEV: Volkswagen Touareg 37500 -> False
+[debug]   Ģimenes PHEV: Mazda MX-30 14900 -> False
+[debug]   Ģimenes PHEV: Atlaide Hyundai ioniq 25490 -> False
+[debug]   Ģimenes PHEV: Rezervēts Renault Kangoo 26900 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Roc 18500 -> False
+[debug]   Ģimenes PHEV: Rezervēts Dacia Duster 19690 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Cross 17900 -> False
+[debug]   Ģimenes PHEV: Atlaide Volvo XC90 49500 -> False
+[debug]   Ģimenes PHEV: Dacia Duster 10995 -> False
+[debug]   Ģimenes PHEV: Rezervēts Dacia Duster 9995 -> False
+[debug]   Ģimenes PHEV: Audi Q5 42900 -> False
+[debug]   Ģimenes PHEV: Volvo XC60 22900 -> False
+[debug]   Ģimenes PHEV: Volkswagen T-Cross 14900 -> False
+[debug]   Ģimenes PHEV: Volvo EC40 44900 -> False
+[debug]   Ģimenes PHEV: Atlaide Citroen C4 16490 -> False
+[debug]   Ģimenes PHEV: Atlaide Peugeot 208 15990 -> False
+[debug]   Ģimenes PHEV: Atlaide Jeep Grand Cherokee 9460 -> False
+[debug]   Ģimenes PHEV: Lynk & Co  01 29900 -> False
+[debug]   Ģimenes PHEV: Škoda Kamiq 16200 -> False
+[debug]   Ģimenes PHEV: Atlaide Opel Mokka 14990 -> False
+[debug]   Ģimenes PHEV: Rezervēts Volvo XC90 53900 -> False
+[debug]   Ģimenes PHEV: Volvo XC90 43500 -> True
+[debug]   Ģimenes PHEV: Atlaide Opel Mokka 18990 -> False
+[debug]   Ģimenes PHEV: Atlaide Volkswagen Multivan 37900 -> False
+[debug]   Ģimenes PHEV: Škoda ENYAQ IV 24900 -> False
+[debug]   Ģimenes PHEV: Kia Sportage 17900 -> False
+[debug]   Ģimenes PHEV: Atlaide Peugeot 5008 19490 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 31900 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 8 15300 -> False
+[debug]   Ģimenes PHEV: Volkswagen Amarok 22900 -> False
+[debug]   Ģimenes PHEV: Volkswagen Taigo 16500 -> False
+[debug]   Ģimenes PHEV: Atlaide Citroen C4 22490 -> False
+[debug]   Ģimenes PHEV: Volkswagen Taigo 16900 -> False
+[debug]   Ģimenes PHEV: Atlaide Mercedes S350 5300 -> False
+[debug]   Ģimenes PHEV: Volvo XC90 54900 -> False
+[debug]   Ģimenes PHEV: Atlaide Volvo XC90 45900 -> False
+[debug]   Ģimenes PHEV: Volvo XC90 54900 -> False
+[debug]   Ģimenes PHEV: BMW X4 27900 -> False
+[debug]   Ģimenes PHEV: Atlaide BMW 540 22990 -> False
+[debug]   Ģimenes PHEV: + Jauns Ford F150 73000 -> False
+[debug]   Ģimenes PHEV: Rezervēts Volvo XC90 42900 -> False
+[debug]   Ģimenes PHEV: BMW X5 41900 -> False
+[debug]   Ģimenes PHEV: Atlaide Kia Ceed 8900 -> False
+[debug]   Ģimenes PHEV: Rezervēts Atlaide Citroen C4 16900 -> False
+[debug]   Ģimenes PHEV: Volkswagen Touareg 48900 -> False
+[debug]   Ģimenes PHEV: Volvo V60 21400 -> False
+[debug]   Ģimenes PHEV: Volvo V60 18800 -> False
+[debug]   Ģimenes PHEV: Škoda Kamiq 15900 -> False
+[debug]   Ģimenes PHEV: Rezervēts Atlaide Opel Corsa 18490 -> False
+[debug]   Ģimenes PHEV: Atlaide Volvo C40 29490 -> False
+[debug]   Ģimenes PHEV: Rezervēts Atlaide Audi E-tron 37990 -> False
+[debug]   Ģimenes PHEV: Atlaide Seat Tarraco 14900 -> False
+[debug]   Ģimenes PHEV: Rezervēts Atlaide Volvo XC60 51900 -> False
+[debug]   Ģimenes PHEV: Atlaide + Jauns Ford F150 65000 -> False
+[debug]   Ģimenes PHEV: Volkswagen Transporter 12200 -> False
+[debug]   Ģimenes PHEV: Ford F150 69990 -> False
+[debug]   Ģimenes PHEV: Atlaide Volvo XC60 9500 -> False
+[debug]   Ģimenes PHEV: Atlaide Volvo XC40 26900 -> False
+[debug]   Ģimenes PHEV: Volvo V60 16900 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 8 14900 -> False
+[debug]   Ģimenes PHEV: Škoda Octavia 16900 -> False
+[debug]   Ģimenes PHEV: Rezervēts Volvo XC60 25900 -> False
+[debug]   Ģimenes PHEV: Atlaide Volvo XC60 27900 -> False
+[debug]   Ģimenes PHEV: Atlaide Volvo EX30 35900 -> False
+[debug]   Ģimenes PHEV: Volkswagen Golf 8 14900 -> False
+[debug]   Ģimenes PHEV: Volvo V90 24500 -> True
+[debug]   Ģimenes PHEV: Mercedes C220 26900 -> False
+[debug]   Ģimenes PHEV: Atlaide BMW X3 24900 -> False
+[debug]   Ģimenes PHEV: Škoda Kodiaq 17400 -> False
+[debug]   Ģimenes PHEV: Demo Lynk & Co  01 29900 -> False
+[debug]   Ģimenes PHEV: Atlaide BMW 430 35900 -> False
+[debug]   Ģimenes PHEV: Atlaide BMW X5 36900 -> False
+[debug]   Ģimenes PHEV: Rezervēts Volvo XC40 18900 -> False
+[debug]   Ģimenes PHEV: Ford Puma 17795 -> False
+[debug]   Ģimenes PHEV: BMW X5 21900 -> False
+[debug]   Ģimenes PHEV: Ford Focus 5790 -> False
+[debug]   Ģimenes PHEV: BMW Motorrad C-series 8900 -> False
+[debug]   Ģimenes PHEV: Volkswagen Passat (B8) 12900 -> False
+[debug]   Ģimenes PHEV: Mini COUNTRYMAN COOPER S 13990 -> False
+[debug]   Ģimenes PHEV: Mazda CX-5 13990 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 2600 14900 -> False
+[debug]   Ģimenes PHEV: BMW X1 14990 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 2600 15900 -> False
+[debug]   Ģimenes PHEV: Ford Puma 15990 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 3000 16500 -> False
+[debug]   Ģimenes PHEV: BMW 225 16500 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 2600 16900 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 2600 16900 -> False
+[debug]   Ģimenes PHEV: Land Rover Range Rover 16990 -> False
+[debug]   Ģimenes PHEV: BMW 520D 16990 -> False
+[debug]   Ģimenes PHEV: Mazda CX-30 16990 -> False
+[debug]   Ģimenes PHEV: BMW 525 17500 -> False
+[debug]   Ģimenes PHEV: Volkswagen Tiguan 18990 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 200 19790 -> False
+[debug]   Ģimenes PHEV: Mercedes-Benz GLC 250 4MATIC 19990 -> False
+[debug]   Ģimenes PHEV: Mitsubishi L200 19990 -> False
+[debug]   Ģimenes PHEV: SEAT Ateca 19990 -> False
+[debug]   Ģimenes PHEV: Mazda CX-5 19990 -> False
+[debug]   Ģimenes PHEV: Nissan Juke 21990 -> False
+[debug]   Ģimenes PHEV: Mazda CX-5 21990 -> False
+[debug]   Ģimenes PHEV: Mazda 6 22990 -> False
+[debug]   Ģimenes PHEV: Toyota Camry 23500 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 1100 25890 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 2600 25900 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 4000 27500 -> False
+[debug]   Ģimenes PHEV: BMW X3 28900 -> False
+[debug]   Ģimenes PHEV: BMW X4 29000 -> False
+[debug]   Ģimenes PHEV: BMW 750 29500 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 4000 31500 -> False
+[debug]   Ģimenes PHEV: BMW 320 31900 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 1600 32900 -> False
+[debug]   Ģimenes PHEV: Mazda CX-60 33990 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 4000 33990 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 1400 35500 -> False
+[debug]   Ģimenes PHEV: BMW 420 36900 -> False
+[debug]   Ģimenes PHEV: BMW 320 36900 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 3000 36990 -> False
+[debug]   Ģimenes PHEV: BMW 320 37900 -> False
+[debug]   Ģimenes PHEV: BMW 320 38000 -> False
+[debug]   Ģimenes PHEV: BMW X5 38000 -> False
+[debug]   Ģimenes PHEV: BMW 540 38500 -> False
+[debug]   Ģimenes PHEV: BMW 330 38500 -> False
+[debug]   Ģimenes PHEV: BMW X3 38900 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 3600 39900 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 2600 39900 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 6600 39900 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 7000 41500 -> False
+[debug]   Ģimenes PHEV: BMW X2 41700 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 3600 41900 -> False
+[debug]   Ģimenes PHEV: BMW X3 41900 -> False
+[debug]   Ģimenes PHEV: BMW X5 42500 -> False
+[debug]   Ģimenes PHEV: Ford Ranger 42890 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 4000 42900 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 1100 42900 -> False
+[debug]   Ģimenes PHEV: BMW X5 43000 -> False
+[debug]   Ģimenes PHEV: BMW X4 43900 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 15820 44500 -> False
+[debug]   Ģimenes PHEV: Ford Ranger 44990 -> False
+[debug]   Ģimenes PHEV: BMW X1 46500 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 2500 47000 -> False
+[debug]   Ģimenes PHEV: BMW X5 48500 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 5600 49900 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 5600 49900 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 5600 49900 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 5600 49900 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 5600 49900 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 15000 49990 -> False
+[debug]   Ģimenes PHEV: BMW 840 52900 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 20440 54990 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 9600 57900 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 7600 59900 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 4000 65500 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 3600 65900 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 3600 65900 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 3600 65900 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 6600 67900 -> False
+[debug]   Ģimenes PHEV: ATLAIDE 5000 81900 -> False
+[debug]   Ģimenes PHEV: Mercedes-Benz V250 81900 -> False
+Biežākie iemesli, kāpēc auto neatbilst: marka 322, year 289, degviela 235, drive 205, aprīkojums 75, km 45, gearbox 7, body 5
+Atvērti sludinājumi: 127 jauni, 0 pārbaudīti atkārtoti
+  [paziņojums] Ģimenes PHEV: jauns Cupra Formentor 2022: 27 110 € · Moller Auto
+  [paziņojums] Ģimenes PHEV: jauns Volkswagen Tiguan 2022: 29 900 € · Moller Auto
+  [paziņojums] Ģimenes PHEV: jauns Volkswagen Touareg 2021: 29 950 € · Moller Auto
+  [paziņojums] Ģimenes PHEV: jauns Audi Q5 2022: 30 350 € · Moller Auto
+  [paziņojums] Ģimenes PHEV: jauns Volkswagen Arteon 2021: 36 660 € · Moller Auto
+  [paziņojums] Ģimenes PHEV: jauns Audi Q8 2025: 67 900 € · Moller Auto
+  [paziņojums] Ģimenes PHEV: jauns Audi Q8 2026: 85 900 € · Moller Auto
+  [paziņojums] Ģimenes PHEV: jauns CUPRA New Formentor VZ 2026: 39 990 € · Autobrava
+  [paziņojums] Ģimenes PHEV: jauns Audi Q5 2022: 32 000 € · Mūsa Motors
+  [paziņojums] Ģimenes PHEV: jauns Volvo XC90 2022: 43 500 € · Mūsa Motors
+  [paziņojums] Ģimenes PHEV: jauns Volvo V90 2021: 24 500 € · Mūsa Motors
+„Ģimenes PHEV”: atbilst 11, jauni 11, lētāki 0
+Gatavs (518 s).
