@@ -2,8 +2,8 @@ name: Auto uzraugs
 
 on:
   schedule:
-    # katru stundu 6:00–22:00 pēc Rīgas laika (laiks šeit ir UTC)
-    - cron: "0 4-20 * * *"
+    # katru stundu (:17) 6:00–22:00 pēc Rīgas laika (laiks šeit ir UTC); pilnā stunda ir GitHub noslogotākais brīdis
+    - cron: "17 4-20 * * *"
   workflow_dispatch:
     inputs:
       full_scan:
