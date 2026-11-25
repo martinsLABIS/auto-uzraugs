@@ -32,6 +32,7 @@ jobs:
         env:
           URLS: ${{ inputs.urls }}
           DELAY: "0.5"
+          COMPACT: "1"
       - name: Sausais tests (bez paziņojumiem, ar tukšu stāvokli)
         if: inputs.mode == 'dryrun'
         run: |

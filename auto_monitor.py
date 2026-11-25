@@ -51,8 +51,8 @@ HEADERS = {
 
 # ------------------------------------------------------- atpazīšanas noteikumi
 PLUGIN_RE = re.compile(
-    r"plug[\s-]?in|\bphev\b|uzlādējam\w*|lādējam\w* hibr|e-?hybrid|hybrid4|"
-    r"\btfsi ?e\b|\bgte\b|\b\d{2}e\b|\b\d{3} ?d?e\b|\brecharge\b|\bt8\b|"
+    r"plug[\s-]?in|\bphev\b|uzlādējam\w*|lādējam\w* hibr|e-?hybrid|\bcooper se\b|\bse all4\b|"
+    r"\btfsi ?e\b|\bgte\b|\b\d{2}e\b|\b[1-9]\d[05] ?[dx]?e\b(?!-)|\brecharge\b|\bt8\b|"
     r"\b4xe\b|\b450h\+|xdrive ?\d{2}e\b|плагин|подзаряжа\w*|подключаем\w* гибрид",
     re.I,
 )
@@ -67,8 +67,14 @@ SKODA_IV_RE = re.compile(r"\biV\b")   # reģistrjutīgs: Skoda iV, bet ne Golf I
 EV_MODEL_RE = re.compile(
     r"enyaq|elroq|\bid\.? ?[3-7]\b|e-tron|ioniq ?[56]|\bev[369]\b|model [3ysx]\b|"
     r"mustang mach|\beqa\b|\beqb\b|\beqc\b|\beqe\b|\bix[13]?\b|\bi[45]\b|xc40 recharge pure|c40", re.I)
+# tīra elektroauto pazīmes tekstā (Volvo P8/Twin Motor u. c.)
+EV_TEXT_RE = re.compile(r"\bp[68]\b|twin motor|pure electric|elektroauto|\bbev\b", re.I)
+# modeļi, kuru plug-in versijas ražotas tikai ar priekšpiedziņu (pārdevēju atzīmēm "4x4" netic)
+FWD_ONLY_RE = re.compile(
+    r"kuga|\ba3\b|\bq3\b|golf|passat|octavia|superb|niro|ceed|ioniq|formentor|\bleon\b|"
+    r"\ba ?250|\bb ?250|captur|megane|\b308\b|astra|c5 aircross|corolla|c-hr|prius|xc ?40|\bx2\b", re.I)
 # modeļi, kuru plug-in versijas vienmēr ir ar pilnpiedziņu
-ALWAYS_AWD_RE = re.compile(r"outlander|rav ?4|\bt8\b|nx ?450|\b4xe\b|hybrid4", re.I)
+ALWAYS_AWD_RE = re.compile(r"outlander|rav ?4|\bt8\b|nx ?450|\b4xe\b", re.I)
 EV_RE = re.compile(r"elektr\w*|\bev\b|e-tron|\bid\.? ?[4-7]\b|enyaq|электро", re.I)
 # ss.com saraksta rindas norāde, ka vērts atvērt sludinājumu
 SS_HINT_RE = re.compile(
@@ -81,9 +87,14 @@ SS_HINT_RE = re.compile(
 def classify(text, model=""):
     """Atgriež 'Plug-in 4x4', 'Elektro 4x4' vai None. model – marka/modelis no saites vai virsraksta."""
     explicit_hybrid = bool(re.search(r"plug[\s-]?in|\bphev\b|hibr|hybrid", text, re.I))
-    is_ev_model = bool(EV_MODEL_RE.search(model or text[:80])) and not explicit_hybrid
-    plugin = not is_ev_model and bool(PLUGIN_RE.search(text) or SKODA_IV_RE.search(text))
-    awd = bool(AWD_RE.search(text)) or (plugin and bool(ALWAYS_AWD_RE.search(text)))
+    is_ev_model = (bool(EV_MODEL_RE.search(model or text[:80])) or bool(EV_TEXT_RE.search(text))) \
+        and not explicit_hybrid
+    # Hybrid4 ar HDi dīzeli (2011–2016) ir parasts hibrīds; benzīna Hybrid4 (no 2019) – plug-in
+    hybrid4_phev = bool(re.search(r"hybrid4", text, re.I)) and not re.search(r"\bhdi\b|dīzel|diesel", text, re.I)
+    plugin = not is_ev_model and bool(PLUGIN_RE.search(text) or SKODA_IV_RE.search(text) or hybrid4_phev)
+    awd = bool(AWD_RE.search(text)) or (plugin and bool(ALWAYS_AWD_RE.search(text))) or hybrid4_phev
+    if plugin and not hybrid4_phev and FWD_ONLY_RE.search(model or text[:80]):
+        awd = False
     if plugin and awd:
         return "Plug-in 4x4"
     if INCLUDE_EV and awd and (is_ev_model or EV_RE.search(text)):
@@ -202,7 +213,8 @@ def moller_cards(soup):
         if not prices:
             continue
         title = PRICE_RE.split(text)[0]
-        title = re.sub(r"^(?:(?:Garantija|Jaunums|Akcija|Rezervēts)\s+)+", "", title).strip()[:70]
+        title = re.sub(r"^(?:(?:Garantija|Jaunums|Akcija|Rezervēts)\s+)+", "", title).strip()
+        title = re.sub(r"((?:19|20)\d{2}),.*$", r"\1", title)[:70]   # "Audi Q5 2023, 2.0 …" -> "Audi Q5 2023"
         cards[cid] = {"id": cid, "title": title, "price": min(prices), "text": text,
                       "url": f"https://mollerauto.lv/lv/{cid}.html"}
     return list(cards.values())
