@@ -3,13 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Plug-in 4x4</title>
-<meta name="description" content="Plug-in hibrīdi ar pilnpiedziņu no ss.com un Moller Auto">
+<title>Auto meklētājs</title>
+<meta name="description" content="Mani auto meklējumi ss.com, Moller Auto, Autobrava, MG56, Mūsa Motors, Bravoauto un AutoScout24">
 <meta name="theme-color" content="#0b6e68">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="apple-mobile-web-app-title" content="Plug-in 4x4">
+<meta name="apple-mobile-web-app-title" content="Auto meklētājs">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon-192.png" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -19,209 +18,84 @@
 <style>
 :root {
   color-scheme: light;
-  --bg: #edf0ee;
-  --surface: #ffffff;
-  --ink: #16232b;
-  --muted: #5e6b72;
-  --line: #d5dcd9;
-  --charge: #0b6e68;
-  --charge-soft: #dcefec;
-  --drop: #a64b08;
-  --drop-soft: #f8e6d6;
-  --new: #2457a6;
-  --new-soft: #e0e8f6;
+  --bg: #edf0ee; --surface: #ffffff; --ink: #16232b; --muted: #5e6b72; --line: #d5dcd9;
+  --charge: #0b6e68; --charge-soft: #dcefec; --drop: #a64b08; --drop-soft: #f8e6d6;
+  --new: #2457a6; --new-soft: #e0e8f6; --danger: #b42318;
   --font: "Barlow Semi Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
 }
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
-    --bg: #0f171b;
-    --surface: #182328;
-    --ink: #e6ecea;
-    --muted: #96a4aa;
-    --line: #2a383e;
-    --charge: #4cc2b8;
-    --charge-soft: #173a38;
-    --drop: #f0a050;
-    --drop-soft: #3a2a1a;
-    --new: #8fb2ee;
-    --new-soft: #1d2b44;
+    --bg: #0f171b; --surface: #182328; --ink: #e6ecea; --muted: #96a4aa; --line: #2a383e;
+    --charge: #4cc2b8; --charge-soft: #173a38; --drop: #f0a050; --drop-soft: #3a2a1a;
+    --new: #8fb2ee; --new-soft: #1d2b44; --danger: #ff8a80;
   }
 }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; scroll-padding-top: env(safe-area-inset-top, 0px); }
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--ink);
-  font: 400 17px/1.4 var(--font);
-  padding-bottom: env(safe-area-inset-bottom, 0px);
-}
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0 0 auto;
-  height: env(safe-area-inset-top, 0px);
-  background: var(--surface);
-  z-index: 10;
-}
-.wrap { max-width: 720px; margin: 0 auto; padding: 0 16px; }
-
-header {
-  position: sticky;
-  top: env(safe-area-inset-top, 0px);
-  z-index: 5;
-  background: var(--surface);
-  border-bottom: 1px solid var(--line);
-}
-.top {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 12px;
-  padding-top: 14px;
-}
-h1 {
-  margin: 0;
-  font-size: 30px;
-  line-height: 1;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-}
-h1 .plug { color: var(--charge); }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 17px/1.4 var(--font);
+  padding-bottom: env(safe-area-inset-bottom, 0px); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px);
+  background: var(--surface); z-index: 10; }
+.wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+button, input, select { font: inherit; color: inherit; }
+header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--surface);
+  border-bottom: 1px solid var(--line); }
+.top { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; padding-top: 14px; }
+h1 { margin: 0; font-size: 24px; line-height: 1; font-weight: 700; letter-spacing: -0.01em; }
 .status { margin: 4px 0 0; color: var(--muted); font-size: 15px; }
-.refresh {
-  flex: none;
-  border: 1px solid var(--line);
-  background: transparent;
-  color: var(--ink);
-  font: 500 15px var(--font);
-  padding: 8px 12px;
-  border-radius: 999px;
-  cursor: pointer;
-}
-.refresh[aria-busy="true"] { opacity: .5; }
+.actions { display: flex; gap: 6px; flex: none; }
+.btn { border: 1px solid var(--line); background: transparent; padding: 8px 12px; border-radius: 999px;
+  font-weight: 500; font-size: 15px; cursor: pointer; }
+.btn.primary { background: var(--charge); border-color: var(--charge); color: #fff; }
+@media (prefers-color-scheme: dark) { .btn.primary { color: #0f171b; } }
+.btn.danger { color: var(--danger); border-color: transparent; }
+.btn[aria-busy="true"] { opacity: .5; }
 
-.views {
-  display: flex;
-  gap: 4px;
-  margin: 12px 0 10px;
-  padding: 3px;
-  background: var(--bg);
-  border-radius: 10px;
-}
-.views button {
-  flex: 1;
-  border: 0;
-  background: transparent;
-  color: var(--muted);
-  font: 500 16px var(--font);
-  padding: 7px 4px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-.views button[aria-pressed="true"] {
-  background: var(--surface);
-  color: var(--ink);
-  box-shadow: 0 1px 2px rgb(0 0 0 / .12);
-}
-.views .n { color: var(--muted); font-weight: 400; margin-left: 2px; }
+.tabs { display: flex; gap: 6px; overflow-x: auto; padding: 12px 0 2px; scrollbar-width: none; }
+.tabs::-webkit-scrollbar { display: none; }
+.tab { flex: none; border: 1px solid var(--line); background: var(--surface); border-radius: 999px;
+  padding: 6px 12px; font-weight: 600; font-size: 16px; cursor: pointer; }
+.tab[aria-pressed="true"] { background: var(--ink); color: var(--surface); border-color: var(--ink); }
+.tab .n { font-weight: 400; opacity: .7; margin-left: 4px; }
+.tab.off { opacity: .55; }
 
-.controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 12px;
-  align-items: center;
-  padding-bottom: 12px;
-}
-.controls select {
-  font: 500 15px var(--font);
-  color: var(--ink);
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  padding: 6px 8px;
-}
+.views { display: flex; gap: 4px; margin: 10px 0 8px; padding: 3px; background: var(--bg); border-radius: 10px; }
+.views button { flex: 1; border: 0; background: transparent; color: var(--muted); font-weight: 500;
+  font-size: 16px; padding: 7px 4px; border-radius: 8px; cursor: pointer; }
+.views button[aria-pressed="true"] { background: var(--surface); color: var(--ink); box-shadow: 0 1px 2px rgb(0 0 0 / .12); }
+.views .n { font-weight: 400; color: var(--muted); margin-left: 2px; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; padding-bottom: 12px; }
+.controls select { font-weight: 500; font-size: 15px; background: var(--surface); border: 1px solid var(--line);
+  border-radius: 8px; padding: 6px 8px; }
 .controls label { display: inline-flex; align-items: center; gap: 6px; font-size: 15px; color: var(--muted); }
-.controls input { accent-color: var(--charge); width: 18px; height: 18px; margin: 0; }
+input[type="checkbox"], input[type="radio"] { accent-color: var(--charge); width: 18px; height: 18px; margin: 0; }
 
 main { padding: 12px 0 32px; }
 .list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 .list li[hidden] { display: none; }
-
-.car {
-  display: grid;
-  grid-template-columns: 104px 1fr auto;
-  gap: 12px;
-  align-items: center;
-  padding: 10px 12px 10px 10px;
-  background: var(--surface);
-  border-radius: 12px;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid var(--line);
-}
-.car:active { transform: scale(.99); }
+.car { display: grid; grid-template-columns: 104px 1fr auto; gap: 12px; align-items: center;
+  padding: 10px 12px 10px 10px; background: var(--surface); border-radius: 12px; color: inherit;
+  text-decoration: none; border: 1px solid var(--line); }
 .car:focus-visible { outline: 3px solid var(--charge); outline-offset: 2px; }
-.thumb {
-  width: 104px;
-  aspect-ratio: 4 / 3;
-  border-radius: 8px;
-  object-fit: cover;
-  background: var(--bg);
-  display: block;
-}
+.thumb { width: 104px; aspect-ratio: 4 / 3; border-radius: 8px; object-fit: cover; background: var(--bg); display: block; }
 .thumb.empty { display: grid; place-items: center; color: var(--muted); font-size: 13px; }
 .info { min-width: 0; }
-.name {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 1.15;
-  overflow-wrap: anywhere;
-}
+.name { margin: 0; font-size: 18px; font-weight: 600; line-height: 1.15; overflow-wrap: anywhere;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .meta { margin: 3px 0 0; color: var(--muted); font-size: 15px; }
 .tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
-.tag {
-  font-size: 13px;
-  font-weight: 600;
-  padding: 1px 7px;
-  border-radius: 999px;
-  background: var(--bg);
-  color: var(--muted);
-}
+.tag { font-size: 13px; font-weight: 600; padding: 1px 7px; border-radius: 999px; background: var(--bg); color: var(--muted); }
 .tag.new { background: var(--new-soft); color: var(--new); }
 .tag.drop { background: var(--drop-soft); color: var(--drop); }
+.tag.spec { background: var(--charge-soft); color: var(--charge); }
 .tag.over { background: transparent; border: 1px dashed var(--line); }
-
 .price { text-align: right; align-self: start; padding-top: 2px; }
-.price .now {
-  display: block;
-  font-size: 24px;
-  font-weight: 600;
-  font-variant-numeric: tabular-nums;
-  line-height: 1;
-  white-space: nowrap;
-}
-.price .was {
-  display: block;
-  margin-top: 4px;
-  font-size: 14px;
-  color: var(--muted);
-  text-decoration: line-through;
-  font-variant-numeric: tabular-nums;
-  white-space: nowrap;
-}
-.price .diff {
-  display: block;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--drop);
-  font-variant-numeric: tabular-nums;
-  white-space: nowrap;
-}
-
-@media (max-width: 420px) {
+.price .now { display: block; font-size: 24px; font-weight: 600; font-variant-numeric: tabular-nums; line-height: 1; white-space: nowrap; }
+.price .was { display: block; margin-top: 4px; font-size: 14px; color: var(--muted); text-decoration: line-through;
+  font-variant-numeric: tabular-nums; white-space: nowrap; }
+.price .diff { display: block; font-size: 14px; font-weight: 600; color: var(--drop); font-variant-numeric: tabular-nums; white-space: nowrap; }
+@media (max-width: 440px) {
   .car { grid-template-columns: 84px 1fr; grid-template-areas: "img info" "img price"; row-gap: 6px; }
   .thumb { width: 84px; grid-area: img; align-self: start; }
   .info { grid-area: info; }
@@ -229,19 +103,50 @@ main { padding: 12px 0 32px; }
   .price .now { font-size: 22px; }
   .price .was, .price .diff { margin-top: 0; }
 }
-
-.empty-state, .error {
-  padding: 32px 16px;
-  text-align: center;
-  color: var(--muted);
-}
+.empty-state, .error { padding: 32px 16px; text-align: center; color: var(--muted); }
 .error { color: var(--drop); }
-.sr-only {
-  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
-  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
-}
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 footer { color: var(--muted); font-size: 14px; padding-bottom: 24px; }
-@media (prefers-reduced-motion: reduce) { .car:active { transform: none; } }
+
+/* dialogi */
+dialog { border: 0; padding: 0; background: var(--surface); color: var(--ink); width: min(720px, 100%);
+  max-height: min(92dvh, 100%); border-radius: 16px; }
+dialog:modal { overscroll-behavior: contain; }
+dialog::backdrop { background: rgb(0 0 0 / .45); overflow: hidden; overscroll-behavior: contain; }
+@media (max-width: 600px) {
+  dialog { width: 100%; max-width: 100%; height: 100%; max-height: 100%; border-radius: 0; margin: 0; }
+}
+.dlg-head { position: sticky; top: 0; z-index: 1; display: flex; align-items: center; justify-content: space-between;
+  gap: 8px; padding: calc(12px + env(safe-area-inset-top, 0px)) 16px 12px; background: var(--surface);
+  border-bottom: 1px solid var(--line); }
+.dlg-head h1 { font-size: 22px; }
+.dlg-body { padding: 16px 16px calc(24px + env(safe-area-inset-bottom, 0px)); }
+.dlg-foot { position: sticky; bottom: 0; display: flex; gap: 8px; justify-content: space-between; align-items: center;
+  padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0px)); background: var(--surface); border-top: 1px solid var(--line); }
+.search-row { display: flex; align-items: center; gap: 10px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.search-row .grow { flex: 1; min-width: 0; }
+.search-row strong { display: block; font-size: 18px; }
+.search-row span { color: var(--muted); font-size: 14px; }
+fieldset { border: 0; margin: 0 0 20px; padding: 0; }
+legend { font-weight: 700; font-size: 18px; margin-bottom: 8px; padding: 0; }
+.field { display: grid; gap: 4px; margin-bottom: 12px; }
+.field label, .lbl { font-size: 15px; color: var(--muted); }
+.field input[type="text"], .field input[type="number"], .field input[type="password"], .field input:not([type]) {
+  width: 100%; padding: 9px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); font-size: 17px; }
+.pair { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.checks { display: flex; flex-wrap: wrap; gap: 6px; }
+.checks label { display: inline-flex; align-items: center; gap: 6px; padding: 6px 10px; border: 1px solid var(--line);
+  border-radius: 999px; font-size: 15px; cursor: pointer; }
+.checks label:has(input:checked) { background: var(--charge-soft); border-color: var(--charge); color: var(--charge); }
+.checks input { width: 16px; height: 16px; }
+details.group { border-top: 1px solid var(--line); padding: 8px 0; }
+details.group summary { cursor: pointer; font-weight: 600; padding: 4px 0; }
+details.group .checks { margin: 8px 0 4px; }
+.hint { color: var(--muted); font-size: 14px; margin: 4px 0 0; }
+.msg { font-size: 15px; min-height: 1.4em; margin: 0; }
+.msg.err { color: var(--danger); }
+.msg.ok { color: var(--charge); }
 </style>
 </head>
 <body>
@@ -249,11 +154,15 @@ footer { color: var(--muted); font-size: 14px; padding-bottom: 24px; }
   <div class="wrap">
     <div class="top">
       <div>
-        <h1><span class="plug">Plug-in</span> 4x4</h1>
+        <h1>Auto meklētājs</h1>
         <p class="status" id="status">Ielādē…</p>
       </div>
-      <button class="refresh" id="refresh" type="button">Atjaunot</button>
+      <div class="actions">
+        <button class="btn" id="refresh" type="button">Atjaunot</button>
+        <button class="btn primary" id="open-searches" type="button">Meklējumi</button>
+      </div>
     </div>
+    <div class="tabs" id="tabs" role="group" aria-label="Meklējums"></div>
     <div class="views" role="group" aria-label="Rādīt">
       <button type="button" data-view="all" aria-pressed="true">Visi <span class="n" id="n-all"></span></button>
       <button type="button" data-view="new" aria-pressed="false">Jauni <span class="n" id="n-new"></span></button>
@@ -266,102 +175,138 @@ footer { color: var(--muted); font-size: 14px; padding-bottom: 24px; }
         <option value="year">Jaunākais gads</option>
         <option value="km">Mazākais nobraukums</option>
       </select>
-      <select id="source" aria-label="Avots">
-        <option value="">Visi avoti</option>
-        <option value="SS">ss.com</option>
-        <option value="Moller">Moller Auto</option>
-      </select>
-      <label><input type="checkbox" id="over"> <span id="over-label">Arī virs robežas</span></label>
+      <select id="source" aria-label="Avots"><option value="">Visi avoti</option></select>
+      <label><input type="checkbox" id="over"> <span id="over-label">Arī virs cenas robežas</span></label>
     </div>
   </div>
 </header>
 
 <main class="wrap">
   <ul class="list" id="list"></ul>
-  <p class="empty-state" id="empty" hidden>Šajā skatā nav neviena auto.</p>
+  <p class="empty-state" id="empty" hidden></p>
   <p class="error" id="error" hidden></p>
   <p class="sr-only" id="announce" aria-live="polite"></p>
 </main>
-<footer class="wrap" id="footer"></footer>
+<footer class="wrap">Saraksti atjaunojas reizi stundā no 6:00 līdz 22:00. Pieskaries auto, lai atvērtu sludinājumu.</footer>
+
+<!-- Meklējumu saraksts -->
+<dialog id="dlg-list" aria-labelledby="dlg-list-title" closedby="any">
+  <div class="dlg-head">
+    <h1 id="dlg-list-title">Mani meklējumi</h1>
+    <form method="dialog"><button class="btn" value="close">Aizvērt</button></form>
+  </div>
+  <div class="dlg-body">
+    <div id="search-rows"></div>
+    <p><button class="btn primary" type="button" id="add-search">Jauns meklējums</button></p>
+    <p class="hint" id="token-hint"></p>
+    <p><button class="btn" type="button" id="open-settings">Piekļuves iestatījumi</button></p>
+  </div>
+</dialog>
+
+<!-- Meklējuma redaktors -->
+<dialog id="dlg-edit" aria-labelledby="dlg-edit-title">
+  <form id="edit-form" novalidate>
+    <div class="dlg-head">
+      <h1 id="dlg-edit-title">Meklējums</h1>
+      <button class="btn" type="button" id="edit-cancel">Atcelt</button>
+    </div>
+    <div class="dlg-body" id="edit-body"></div>
+    <div class="dlg-foot">
+      <button class="btn danger" type="button" id="edit-delete">Dzēst</button>
+      <p class="msg" id="edit-msg" role="status"></p>
+      <button class="btn primary" type="submit" id="edit-save">Saglabāt</button>
+    </div>
+  </form>
+</dialog>
+
+<!-- Piekļuve -->
+<dialog id="dlg-settings" aria-labelledby="dlg-settings-title" closedby="any">
+  <form id="settings-form">
+    <div class="dlg-head">
+      <h1 id="dlg-settings-title">Piekļuves iestatījumi</h1>
+      <button class="btn" type="button" id="settings-close">Aizvērt</button>
+    </div>
+    <div class="dlg-body">
+      <p>Lai meklējumus varētu saglabāt no šī telefona, ievadi GitHub piekļuves atslēgu. Tā glabājas tikai šajā ierīcē.</p>
+      <div class="field">
+        <label for="token">GitHub atslēga (github_pat_…)</label>
+        <input id="token" type="password" autocomplete="off" spellcheck="false">
+      </div>
+      <p class="hint">Atslēgai jābūt ar piekļuvi tikai repozitorijam auto-uzraugs un atļaujām Contents un Actions – Read and write.</p>
+      <p class="msg" id="settings-msg" role="status"></p>
+    </div>
+    <div class="dlg-foot">
+      <button class="btn danger" type="button" id="token-clear">Noņemt atslēgu</button>
+      <button class="btn primary" type="submit">Saglabāt atslēgu</button>
+    </div>
+  </form>
+</dialog>
 
 <script>
 (() => {
-  const NEW_DAYS = 3;      // cik dienas auto skaitās "jauns"
-  const DROP_DAYS = 14;    // cik dienas rāda cenas kritumu
+  const NEW_DAYS = 3, DROP_DAYS = 14;
   const $ = (id) => document.getElementById(id);
   const fmt = (n) => n.toLocaleString("lv-LV").replace(/,/g, " ") + " €";
   const fmtKm = (n) => Math.round(n / 1000).toLocaleString("lv-LV") + " tūkst. km";
-  const state = { view: "all", sort: "price", source: "", over: false };
-  let data = null;
-  let baseline = 0;   // agrākais atklāšanas laiks – pirmās pārskatīšanas brīdis
-  const nodes = new Map();   // id -> <li>, lai kārtojot pārvietotu esošos elementus
+  const FUEL = { petrol: "Benzīns", diesel: "Dīzelis", hybrid: "Hibrīds", phev: "Plug-in hibrīds", electric: "Elektro", lpg: "Gāze" };
+  const FUEL_TAG = { phev: "Plug-in", electric: "Elektro", hybrid: "Hibrīds", diesel: "Dīzelis", petrol: "Benzīns", lpg: "Gāze" };
+  const DRIVE = { awd: "Pilnpiedziņa (4x4)", fwd: "Priekšpiedziņa", rwd: "Aizmugurpiedziņa" };
+  const GEAR = { auto: "Automāts", manual: "Manuālā" };
+  const BODY = { suv: "Apvidus (SUV)", wagon: "Universāls", sedan: "Sedans", hatch: "Hečbeks", mpv: "Minivens",
+    coupe: "Kupeja", cabrio: "Kabriolets", pickup: "Pikaps", van: "Furgons" };
+  const COUNTRIES = { D: "Vācija", A: "Austrija", NL: "Nīderlande", B: "Beļģija", F: "Francija", I: "Itālija", L: "Luksemburga", E: "Spānija" };
+  const MAKES = ["Audi","BMW","Citroen","Cupra","Dacia","Fiat","Ford","Honda","Hyundai","Jaguar","Jeep","Kia","Land Rover","Lexus",
+    "Mazda","Mercedes-Benz","MG","Mini","Mitsubishi","Nissan","Opel","Peugeot","Porsche","Renault","Seat","Skoda","Subaru",
+    "Suzuki","Tesla","Toyota","Volkswagen","Volvo"];
 
-  try {
-    Object.assign(state, JSON.parse(localStorage.getItem("plugin4x4") || "{}"));
-  } catch (e) { /* krātuve nav pieejama */ }
-  const save = () => { try { localStorage.setItem("plugin4x4", JSON.stringify(state)); } catch (e) {} };
+  const [owner] = location.hostname.split(".");
+  const repo = location.pathname.split("/").filter(Boolean)[0] || "auto-uzraugs";
+  const store = {
+    get(k, d) { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch (e) { return d; } },
+    set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} },
+    del(k) { try { localStorage.removeItem(k); } catch (e) {} },
+  };
+  const ui = Object.assign({ search: null, view: "all", sort: "price", source: "", over: false }, store.get("finder-ui", {}));
+  let data = null, config = null, pendingConfig = store.get("finder-pending", null);
+  const nodes = new Map();
 
   const daysAgo = (iso) => iso ? (Date.now() - Date.parse(iso)) / 86400000 : Infinity;
+  function el(tag, cls, text) { const e = document.createElement(tag); if (cls) e.className = cls; if (text !== undefined) e.textContent = text; return e; }
 
-  function enrich(c) {
+  function enrich(c, s) {
     const h = c.history || [];
     let prev = null, dropDate = null;
-    for (let i = h.length - 1; i > 0; i--) {
-      if (h[i][1] < h[i - 1][1]) { prev = h[i - 1][1]; dropDate = h[i][0]; break; }
-    }
-    // auto, kas atrasti jau pirmajā pārskatīšanā, nav "jauni"
-    c.isNew = daysAgo(c.first_seen) <= NEW_DAYS && Date.parse(c.first_seen) - baseline > 2 * 3600000;
+    for (let i = h.length - 1; i > 0; i--) if (h[i][1] < h[i - 1][1]) { prev = h[i - 1][1]; dropDate = h[i][0]; break; }
+    c.isNew = !c.baseline && daysAgo(c.first_seen) <= NEW_DAYS;
     c.isDrop = prev !== null && c.price < prev && daysAgo(dropDate) <= DROP_DAYS;
     c.prev = prev;
-    c.over = c.price > data.max_price;
-    return c;
-  }
-
-  function el(tag, cls, text) {
-    const e = document.createElement(tag);
-    if (cls) e.className = cls;
-    if (text !== undefined) e.textContent = text;
-    return e;
+    c.over = s.price_max ? c.price > s.price_max : false;
   }
 
   function card(c) {
     const li = document.createElement("li");
-    const a = el("a", "car");
-    a.href = c.url;
-    a.target = "_blank";
-    a.rel = "noopener";
-
+    const a = el("a", "car"); a.href = c.url; a.target = "_blank"; a.rel = "noopener";
     if (c.img) {
-      const img = el("img", "thumb");
-      img.src = c.img;
-      img.alt = "";
-      img.loading = "lazy";
-      img.decoding = "async";
-      img.referrerPolicy = "no-referrer";
-      img.onerror = () => img.replaceWith(el("span", "thumb empty", "Nav foto"));
+      const img = el("img", "thumb"); img.src = c.img; img.alt = ""; img.loading = "lazy"; img.decoding = "async";
+      img.referrerPolicy = "no-referrer"; img.onerror = () => img.replaceWith(el("span", "thumb empty", "Nav foto"));
       a.append(img);
-    } else {
-      a.append(el("span", "thumb empty", "Nav foto"));
-    }
-
+    } else a.append(el("span", "thumb empty", "Nav foto"));
     const info = el("div", "info");
     info.append(el("h2", "name", c.title));
     const meta = [c.year, c.km ? fmtKm(+c.km) : ""].filter(Boolean).join(", ");
     if (meta) info.append(el("p", "meta", meta));
     const tags = el("div", "tags");
-    tags.append(el("span", "tag", c.source === "SS" ? "ss.com" : "Moller Auto"));
+    tags.append(el("span", "tag", (data.sources || {})[c.source] || c.source));
+    if (c.fuel && FUEL_TAG[c.fuel]) tags.append(el("span", "tag spec", FUEL_TAG[c.fuel]));
+    if (c.drive === "awd") tags.append(el("span", "tag spec", "4x4"));
     if (c.isNew) tags.append(el("span", "tag new", "Jauns"));
     if (c.isDrop) tags.append(el("span", "tag drop", "Lētāks"));
     if (c.over) tags.append(el("span", "tag over", "Virs robežas"));
     info.append(tags);
     a.append(info);
-
     const price = el("div", "price");
     price.append(el("span", "now", fmt(c.price)));
-    if (c.isDrop) {
-      price.append(el("span", "was", fmt(c.prev)));
-      price.append(el("span", "diff", "−" + fmt(c.prev - c.price)));
-    }
+    if (c.isDrop) { price.append(el("span", "was", fmt(c.prev))); price.append(el("span", "diff", "−" + fmt(c.prev - c.price))); }
     a.append(price);
     li.append(a);
     return li;
@@ -374,83 +319,319 @@ footer { color: var(--muted); font-size: 14px; padding-bottom: 24px; }
     km: (a, b) => (+a.km || 9e9) - (+b.km || 9e9),
   };
 
+  const current = () => data?.searches.find((s) => s.id === ui.search) || data?.searches[0];
+
+  function renderTabs() {
+    const tabs = $("tabs"); tabs.replaceChildren();
+    for (const s of data.searches) {
+      const b = el("button", "tab" + (s.active === false ? " off" : ""), s.name);
+      b.type = "button"; b.setAttribute("aria-pressed", String(s.id === current()?.id));
+      b.append(el("span", "n", String(s.cars.filter((c) => !c.over).length)));
+      b.addEventListener("click", () => { ui.search = s.id; buildList(); apply(true); renderTabs(); });
+      tabs.append(b);
+    }
+  }
+
+  function buildList() {
+    const s = current(); const list = $("list"); list.replaceChildren(); nodes.clear();
+    if (!s) return;
+    for (const c of s.cars) nodes.set(c.id, card(c));
+    $("over-label").textContent = s.watch_max && s.price_max
+      ? `Arī ${Math.round(s.price_max / 1000)}–${Math.round(s.watch_max / 1000)} tūkst. €` : "Arī virs cenas robežas";
+    $("over").parentElement.hidden = !s.watch_max || s.watch_max <= (s.price_max || 0);
+  }
+
   function visible(c) {
-    if (!state.over && c.over) return false;
-    if (state.source && c.source !== state.source) return false;
-    if (state.view === "new" && !c.isNew) return false;
-    if (state.view === "drop" && !c.isDrop) return false;
+    if (!ui.over && c.over) return false;
+    if (ui.source && c.source !== ui.source) return false;
+    if (ui.view === "new" && !c.isNew) return false;
+    if (ui.view === "drop" && !c.isDrop) return false;
     return true;
   }
 
   function apply(announce) {
-    if (!data) return;
+    const s = current(); if (!s) return;
     const list = $("list");
-    const cars = [...data.cars].sort(sorters[state.sort] || sorters.price);
     let shown = 0;
-    for (const c of cars) {
-      const li = nodes.get(c.id);
-      li.hidden = !visible(c);
-      if (!li.hidden) shown++;
-      list.append(li);   // pārvieto esošo elementu, neveido no jauna
+    for (const c of [...s.cars].sort(sorters[ui.sort] || sorters.price)) {
+      const li = nodes.get(c.id); li.hidden = !visible(c); if (!li.hidden) shown++; list.append(li);
     }
-    const base = data.cars.filter((c) => (state.over || !c.over) && (!state.source || c.source === state.source));
+    const base = s.cars.filter((c) => (ui.over || !c.over) && (!ui.source || c.source === ui.source));
     $("n-all").textContent = base.length;
     $("n-new").textContent = base.filter((c) => c.isNew).length;
     $("n-drop").textContent = base.filter((c) => c.isDrop).length;
     $("empty").hidden = shown > 0;
-    document.querySelectorAll(".views button").forEach((b) =>
-      b.setAttribute("aria-pressed", String(b.dataset.view === state.view)));
-    $("sort").value = state.sort;
-    $("source").value = state.source;
-    $("over").checked = state.over;
+    $("empty").textContent = s.cars.length ? "Šajā skatā nav neviena auto." :
+      "Šim meklējumam vēl nav atrastu auto. Ja meklējums ir jauns, rezultāti parādīsies pēc nākamās pārbaudes.";
+    document.querySelectorAll(".views button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.view === ui.view)));
+    $("sort").value = ui.sort; $("source").value = ui.source; $("over").checked = ui.over;
     if (announce) $("announce").textContent = shown + " auto";
-    save();
+    store.set("finder-ui", ui);
   }
 
   function timeLabel(iso) {
     const min = Math.round((Date.now() - Date.parse(iso)) / 60000);
-    if (min < 1) return "tikko";
-    if (min < 60) return `pirms ${min} min`;
-    const h = Math.round(min / 60);
-    if (h < 24) return `pirms ${h} h`;
+    if (min < 1) return "tikko"; if (min < 60) return `pirms ${min} min`;
+    const h = Math.round(min / 60); if (h < 24) return `pirms ${h} h`;
     return new Date(iso).toLocaleDateString("lv-LV");
   }
 
   async function load() {
-    const btn = $("refresh");
-    btn.setAttribute("aria-busy", "true");
+    const btn = $("refresh"); btn.setAttribute("aria-busy", "true");
     try {
-      const r = await fetch("data.json?t=" + Date.now(), { cache: "no-store" });
-      if (!r.ok) throw new Error("HTTP " + r.status);
-      data = await r.json();
-      baseline = Math.min(...data.cars.map((c) => Date.parse(c.first_seen) || Infinity));
-      data.cars.forEach(enrich);
-      const list = $("list");
-      list.replaceChildren();
-      nodes.clear();
-      for (const c of data.cars) nodes.set(c.id, card(c));
-      const inLimit = data.cars.filter((c) => !c.over).length;
-      $("status").textContent = `${inLimit} auto līdz ${fmt(data.max_price)}. Atjaunināts ${timeLabel(data.updated)}.`;
-      $("over-label").textContent = `Arī ${Math.round(data.max_price / 1000)}–${Math.round(data.scan_max / 1000)} tūkst. €`;
-      $("footer").textContent = "Saraksts atjaunojas reizi stundā no 6:00 līdz 22:00. Pieskaries auto, lai atvērtu sludinājumu.";
+      const [d, cfg] = await Promise.all([
+        fetch("data2.json?t=" + Date.now(), { cache: "no-store" }).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }),
+        fetch("searches.json?t=" + Date.now(), { cache: "no-store" }).then((r) => r.ok ? r.json() : { searches: [] }),
+      ]);
+      data = d;
+      config = cfg;
+      if (pendingConfig && JSON.stringify(pendingConfig) !== JSON.stringify(cfg)) config = pendingConfig;
+      else { pendingConfig = null; store.del("finder-pending"); }
+      for (const s of data.searches) for (const c of s.cars) enrich(c, s);
+      const srcSel = $("source"); srcSel.length = 1;
+      for (const [k, v] of Object.entries(data.sources || {})) srcSel.append(new Option(v, k));
+      if (!current()) ui.search = data.searches[0]?.id || null;
+      renderTabs(); buildList(); apply(false);
+      $("status").textContent = `Atjaunināts ${timeLabel(data.updated)}.` + (pendingConfig ? " Meklējumu izmaiņas tiek apstrādātas." : "");
       $("error").hidden = true;
-      apply(false);
     } catch (e) {
       $("error").hidden = false;
       $("error").textContent = "Sarakstu neizdevās ielādēt. Pārbaudi interneta savienojumu un nospied „Atjaunot”.";
       $("status").textContent = "Nav datu";
-    } finally {
-      btn.removeAttribute("aria-busy");
+    } finally { btn.removeAttribute("aria-busy"); }
+  }
+
+  // ------------------------------------------------ meklējumu redaktors
+  const token = () => store.get("finder-token", "");
+
+  function describe(s) {
+    const f = s.filters || {}, parts = [];
+    if (f.makes?.length) parts.push(f.makes.join(", "));
+    if (f.model) parts.push(f.model);
+    if (f.fuel?.length) parts.push(f.fuel.map((x) => FUEL[x]).join("/"));
+    if (f.drive?.length) parts.push(f.drive.map((x) => DRIVE[x]).join("/"));
+    if (f.price_max) parts.push("līdz " + fmt(f.price_max));
+    if (f.year_min) parts.push("no " + f.year_min + ". g.");
+    if (f.equipment?.length) parts.push(f.equipment.length + " aprīkojuma prasības");
+    return parts.join(", ") || "Bez filtriem";
+  }
+
+  function renderSearchRows() {
+    const rows = $("search-rows"); rows.replaceChildren();
+    for (const s of config.searches) {
+      const row = el("div", "search-row");
+      const grow = el("div", "grow"); grow.append(el("strong", "", s.name)); grow.append(el("span", "", describe(s) + (s.active === false ? " (izslēgts)" : "")));
+      const edit = el("button", "btn", "Mainīt"); edit.type = "button";
+      edit.addEventListener("click", () => openEditor(s));
+      row.append(grow, edit); rows.append(row);
+    }
+    $("token-hint").textContent = token() ? "" : "Lai saglabātu izmaiņas, vispirms pievieno piekļuves atslēgu (poga zemāk).";
+  }
+
+  function checks(name, options, selected) {
+    const wrap = el("div", "checks");
+    for (const [val, label] of Object.entries(options)) {
+      const l = el("label"); const i = el("input"); i.type = "checkbox"; i.name = name; i.value = val;
+      i.checked = (selected || []).includes(val); l.append(i, document.createTextNode(label)); wrap.append(l);
+    }
+    return wrap;
+  }
+  function field(label, input, hint) {
+    const f = el("div", "field"); const id = "f-" + input.name; input.id = id;
+    const l = el("label", "", label); l.htmlFor = id; f.append(l, input);
+    if (hint) f.append(el("p", "hint", hint));
+    return f;
+  }
+  function input(name, value, attrs = {}) {
+    const i = el("input"); i.name = name; i.type = attrs.type || "text"; if (value !== undefined && value !== null) i.value = value;
+    for (const [k, v] of Object.entries(attrs)) if (k !== "type") i.setAttribute(k, v);
+    return i;
+  }
+  function num(name, value, ph) { return input(name, value ?? "", { type: "text", inputmode: "numeric", placeholder: ph || "" }); }
+  function fs(title, ...children) { const f = el("fieldset"); f.append(el("legend", "", title), ...children); return f; }
+  function labelled(text, node) { const d = el("div", "field"); d.append(el("span", "lbl", text), node); return d; }
+
+  let editing = null;
+  function openEditor(s) {
+    editing = s ? JSON.parse(JSON.stringify(s)) : {
+      id: "s" + Date.now().toString(36), name: "", active: true,
+      sources: Object.keys(data.sources || {}), notify: { new: true, drop: true },
+      filters: { makes: [], model: "", fuel: [], drive: [], gearbox: [], body: [], equipment: [], equipment_mode: "all", as_countries: ["D"] },
+    };
+    const f = editing.filters, body = $("edit-body"); body.replaceChildren();
+    $("dlg-edit-title").textContent = s ? "Mainīt meklējumu" : "Jauns meklējums";
+    $("edit-delete").hidden = !s;
+    $("edit-msg").textContent = ""; $("edit-msg").className = "msg";
+
+    const dl = el("datalist"); dl.id = "makes-list"; for (const m of MAKES) dl.append(new Option(m));
+    const nameI = input("name", editing.name, { required: "", placeholder: "piem. Ģimenes PHEV" });
+    const activeL = el("label"); const activeI = input("active", null, { type: "checkbox" }); activeI.checked = editing.active !== false;
+    activeL.append(activeI, document.createTextNode(" Meklējums ieslēgts")); activeL.className = "lbl";
+    body.append(fs("Pamatinformācija", field("Nosaukums", nameI), activeL, dl));
+
+    const makesI = input("makes", (f.makes || []).join(", "), { list: "makes-list", placeholder: "piem. Volvo, BMW" });
+    body.append(fs("Auto",
+      field("Markas (atdali ar komatu, tukšs – visas)", makesI),
+      field("Modelis vai tā daļa (piem. XC60, X5; tukšs – visi)", input("model", f.model, { placeholder: "piem. XC60, XC90" })),
+      el("div", "pair"),
+    ));
+    const pairs = body.lastChild.lastChild;
+    pairs.append(field("Gads no", num("year_min", f.year_min, "piem. 2019")), field("Gads līdz", num("year_max", f.year_max)));
+    const pair2 = el("div", "pair"); pair2.append(field("Cena no, €", num("price_min", f.price_min)), field("Cena līdz, €", num("price_max", f.price_max, "piem. 37000")));
+    const pair3 = el("div", "pair"); pair3.append(field("Nobraukums līdz, km", num("km_max", f.km_max)), field("Jauda no, kW", num("power_min", f.power_min)));
+    body.lastChild.append(pair2, pair3,
+      field("Sekot arī līdz, €", num("watch_max", f.watch_max, "piem. 40000"),
+        "Auto līdz šai cenai tiek uzraudzīti klusām. Ja cena nokrīt zem robežas „Cena līdz”, pienāk paziņojums."));
+
+    body.append(fs("Specifikācija",
+      labelled("Degviela / piedziņas veids", checks("fuel", FUEL, f.fuel)),
+      labelled("Piedziņa", checks("drive", DRIVE, f.drive)),
+      labelled("Ātrumkārba", checks("gearbox", GEAR, f.gearbox)),
+      labelled("Virsbūve", checks("body", BODY, f.body)),
+      el("p", "hint", "Ja nekas nav atzīmēts, der jebkurš variants."),
+    ));
+
+    const eq = fs("Aprīkojums");
+    const mode = el("div", "checks");
+    for (const [v, t] of [["all", "Jābūt visam atzīmētajam"], ["most", "Pietiek ar lielāko daļu (70 %)"]]) {
+      const l = el("label"); const r = input("equipment_mode", v, { type: "radio" }); r.checked = (f.equipment_mode || "all") === v;
+      l.append(r, document.createTextNode(t)); mode.append(l);
+    }
+    eq.append(mode);
+    const cat = data.equipment || { groups: [], items: [] };
+    for (const g of cat.groups) {
+      const items = Object.fromEntries(cat.items.filter((i) => i.group === g.id).map((i) => [i.id, i.name]));
+      const d = el("details", "group"); const sm = el("summary", "", g.name);
+      const cnt = Object.keys(items).filter((k) => (f.equipment || []).includes(k)).length;
+      if (cnt) { sm.textContent += ` (${cnt})`; d.open = true; }
+      d.append(sm, checks("equipment", items, f.equipment)); eq.append(d);
+    }
+    eq.append(el("p", "hint", "Aprīkojumu atpazīst pēc sludinājuma teksta. Ja pārdevējs kaut ko nav minējis, auto netiks parādīts."));
+    body.append(eq);
+
+    body.append(fs("Teksts sludinājumā",
+      field("Jābūt minētam (atdali ar komatu)", input("keywords", f.keywords, { placeholder: "piem. T8" })),
+      field("Nedrīkst būt minēts", input("exclude", f.exclude, { placeholder: "piem. avārij, bojāt" })),
+    ));
+
+    const srcNames = data.sources || {};
+    body.append(fs("Kur meklēt",
+      checks("sources", srcNames, editing.sources),
+      labelled("AutoScout24 valstis", checks("as_countries", COUNTRIES, f.as_countries || ["D"])),
+    ));
+    const notif = el("div", "checks");
+    for (const [k, t] of [["new", "Par jauniem auto"], ["drop", "Par cenu kritumiem"]]) {
+      const l = el("label"); const c = input("notify_" + k, null, { type: "checkbox" }); c.checked = editing.notify?.[k] !== false;
+      l.append(c, document.createTextNode(t)); notif.append(l);
+    }
+    body.append(fs("Paziņojumi", notif));
+    $("dlg-edit").showModal();
+  }
+
+  function readForm() {
+    const form = $("edit-form"), fd = new FormData(form);
+    const n = (k) => { const v = String(fd.get(k) || "").replace(/\D/g, ""); return v ? parseInt(v, 10) : null; };
+    const all = (k) => fd.getAll(k).map(String);
+    const name = String(fd.get("name") || "").trim();
+    const s = editing;
+    s.name = name; s.active = form.elements.active.checked;
+    s.sources = all("sources");
+    s.notify = { new: form.elements.notify_new.checked, drop: form.elements.notify_drop.checked };
+    s.filters = {
+      makes: String(fd.get("makes") || "").split(",").map((x) => x.trim()).filter(Boolean),
+      model: String(fd.get("model") || "").trim(),
+      year_min: n("year_min"), year_max: n("year_max"), price_min: n("price_min"), price_max: n("price_max"),
+      watch_max: n("watch_max"), km_max: n("km_max"), power_min: n("power_min"),
+      fuel: all("fuel"), drive: all("drive"), gearbox: all("gearbox"), body: all("body"),
+      equipment: all("equipment"), equipment_mode: String(fd.get("equipment_mode") || "all"),
+      keywords: String(fd.get("keywords") || "").trim(), exclude: String(fd.get("exclude") || "").trim(),
+      as_countries: all("as_countries"),
+    };
+    return s;
+  }
+
+  function validate(s) {
+    if (!s.name) return "Ievadi meklējuma nosaukumu.";
+    if (!s.sources.length) return "Atzīmē vismaz vienu vietu, kur meklēt.";
+    const f = s.filters;
+    if (f.price_min && f.price_max && f.price_min > f.price_max) return "Cena „no” ir lielāka par cenu „līdz”.";
+    if (f.year_min && f.year_max && f.year_min > f.year_max) return "Gads „no” ir lielāks par gadu „līdz”.";
+    if (f.watch_max && f.price_max && f.watch_max < f.price_max) return "„Sekot arī līdz” jābūt lielākam par „Cena līdz”.";
+    if (!f.price_max && !f.makes.length && !f.fuel.length && !f.model)
+      return "Norādi vismaz cenu, marku, modeli vai degvielu – citādi meklējums aptvers pārāk daudz auto.";
+    return "";
+  }
+
+  const b64 = (str) => btoa(String.fromCharCode(...new TextEncoder().encode(str)));
+
+  async function saveConfig(newCfg, msgEl) {
+    const t = token();
+    if (!t) { msgEl.className = "msg err"; msgEl.textContent = "Nav piekļuves atslēgas – pievieno to „Piekļuves iestatījumos”."; return false; }
+    const api = `https://api.github.com/repos/${owner}/${repo}`;
+    const headers = { Authorization: "Bearer " + t, Accept: "application/vnd.github+json" };
+    msgEl.className = "msg"; msgEl.textContent = "Saglabā…";
+    try {
+      const cur = await fetch(`${api}/contents/docs/searches.json?ref=main&t=${Date.now()}`, { headers, cache: "no-store" });
+      if (cur.status === 401 || cur.status === 403) throw new Error("Atslēga nav derīga vai tai nav piekļuves šim repozitorijam.");
+      const sha = cur.ok ? (await cur.json()).sha : undefined;
+      const put = await fetch(`${api}/contents/docs/searches.json`, {
+        method: "PUT", headers,
+        body: JSON.stringify({ message: "Meklējumi atjaunināti lietotnē", content: b64(JSON.stringify(newCfg, null, 1)), sha, branch: "main" }),
+      });
+      if (!put.ok) throw new Error("Saglabāt neizdevās (" + put.status + ").");
+      await fetch(`${api}/actions/workflows/auto-uzraugs.yml/dispatches`, { method: "POST", headers, body: JSON.stringify({ ref: "main" }) });
+      config = newCfg; pendingConfig = newCfg; store.set("finder-pending", newCfg);
+      msgEl.className = "msg ok"; msgEl.textContent = "Saglabāts. Rezultāti parādīsies pēc dažām minūtēm.";
+      return true;
+    } catch (e) {
+      msgEl.className = "msg err"; msgEl.textContent = e.message || "Saglabāt neizdevās.";
+      return false;
     }
   }
 
-  document.querySelectorAll(".views button").forEach((b) =>
-    b.addEventListener("click", () => { state.view = b.dataset.view; apply(true); }));
-  $("sort").addEventListener("change", (e) => { state.sort = e.target.value; apply(true); });
-  $("source").addEventListener("change", (e) => { state.source = e.target.value; apply(true); });
-  $("over").addEventListener("change", (e) => { state.over = e.target.checked; apply(true); });
+  $("edit-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const s = readForm(), err = validate(s), msg = $("edit-msg");
+    if (err) { msg.className = "msg err"; msg.textContent = err; return; }
+    const btn = $("edit-save"); btn.disabled = true;
+    const next = JSON.parse(JSON.stringify(config));
+    const i = next.searches.findIndex((x) => x.id === s.id);
+    if (i >= 0) next.searches[i] = s; else next.searches.push(s);
+    const ok = await saveConfig(next, msg);
+    btn.disabled = false;
+    if (ok) { renderSearchRows(); setTimeout(() => $("dlg-edit").close(), 1200); $("status").textContent += " Meklējumu izmaiņas tiek apstrādātas."; }
+  });
+  $("edit-cancel").addEventListener("click", () => $("dlg-edit").close());
+  $("edit-delete").addEventListener("click", async () => {
+    const msg = $("edit-msg");
+    if (!confirm(`Dzēst meklējumu „${editing.name}”?`)) return;
+    const next = JSON.parse(JSON.stringify(config));
+    next.searches = next.searches.filter((x) => x.id !== editing.id);
+    if (await saveConfig(next, msg)) { renderSearchRows(); setTimeout(() => $("dlg-edit").close(), 800); }
+  });
+
+  $("open-searches").addEventListener("click", () => { if (!config) return; renderSearchRows(); $("dlg-list").showModal(); });
+  $("add-search").addEventListener("click", () => openEditor(null));
+  $("open-settings").addEventListener("click", () => { $("token").value = token(); $("settings-msg").textContent = ""; $("dlg-settings").showModal(); });
+  $("settings-close").addEventListener("click", () => $("dlg-settings").close());
+  $("settings-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const t = $("token").value.trim(), msg = $("settings-msg");
+    if (!t) { msg.className = "msg err"; msg.textContent = "Ievadi atslēgu."; return; }
+    msg.className = "msg"; msg.textContent = "Pārbauda…";
+    const r = await fetch(`https://api.github.com/repos/${owner}/${repo}`, { headers: { Authorization: "Bearer " + t } }).catch(() => null);
+    if (!r || !r.ok) { msg.className = "msg err"; msg.textContent = "Atslēga nedarbojas šim repozitorijam. Pārbaudi to un mēģini vēlreiz."; return; }
+    store.set("finder-token", t); msg.className = "msg ok"; msg.textContent = "Atslēga saglabāta šajā ierīcē.";
+    renderSearchRows();
+  });
+  $("token-clear").addEventListener("click", () => { store.del("finder-token"); $("token").value = ""; $("settings-msg").className = "msg ok"; $("settings-msg").textContent = "Atslēga noņemta."; renderSearchRows(); });
+
+  document.querySelectorAll(".views button").forEach((b) => b.addEventListener("click", () => { ui.view = b.dataset.view; apply(true); }));
+  $("sort").addEventListener("change", (e) => { ui.sort = e.target.value; apply(true); });
+  $("source").addEventListener("change", (e) => { ui.source = e.target.value; apply(true); });
+  $("over").addEventListener("change", (e) => { ui.over = e.target.checked; apply(true); });
   $("refresh").addEventListener("click", load);
-  document.addEventListener("visibilitychange", () => { if (!document.hidden) load(); });
+  document.addEventListener("visibilitychange", () => { if (!document.hidden && !document.querySelector("dialog[open]")) load(); });
   load();
 })();
 </script>

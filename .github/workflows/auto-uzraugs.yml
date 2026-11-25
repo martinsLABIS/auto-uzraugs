@@ -21,7 +21,7 @@ concurrency:
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
 
@@ -33,12 +33,9 @@ jobs:
       - run: pip install -r requirements.txt
 
       - name: Pārbaudīt sludinājumus
-        run: python auto_monitor.py
+        run: python -m finder.run
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
-          MAX_PRICE: ${{ vars.MAX_PRICE || '37000' }}
-          SCAN_MAX: ${{ vars.SCAN_MAX || '40000' }}
-          INCLUDE_EV: ${{ vars.INCLUDE_EV || '0' }}
           DEBUG: ${{ vars.DEBUG || '0' }}
           FULL_SCAN: ${{ inputs.full_scan && '1' || '0' }}
 
@@ -46,7 +43,7 @@ jobs:
         run: |
           git config user.name "auto-uzraugs"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add state.json docs/data.json
+          git add finder_state.json docs/data2.json
           git diff --cached --quiet && exit 0
           git commit -m "Atjaunināts stāvoklis"
           for i in 1 2 3; do
