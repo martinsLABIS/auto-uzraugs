@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "samples | dryrun | inspect | probe | fetch"
+        description: "samples | dryrun | inspect | probe | fetch | finder"
         default: "dryrun"
       urls:
         description: "ss.com saites (inspect režīmam)"
@@ -41,6 +41,17 @@ jobs:
         run: mkdir -p debug_out && python tools/fetch_urls.py
         env:
           URLS: ${{ inputs.urls }}
+      - name: Meklētāja tests (bez paziņojumiem)
+        if: inputs.mode == 'finder'
+        run: |
+          mkdir -p debug_out
+          python -m finder.run 2>&1 | tee debug_out/log.txt
+        env:
+          DRY_RUN: "1"
+          DEBUG: "1"
+          STATE_FILE: debug_out/finder_state.json
+          SITE_DIR: debug_out
+          SEARCH_FILE: docs/searches.json
       - name: Sausais tests (bez paziņojumiem, ar tukšu stāvokli)
         if: inputs.mode == 'dryrun'
         run: |

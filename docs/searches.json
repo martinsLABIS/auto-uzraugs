@@ -1,0 +1,48 @@
+{
+ "searches": [
+  {
+   "id": "plugin4x4",
+   "name": "Plug-in 4x4",
+   "active": true,
+   "sources": [
+    "ss",
+    "moller",
+    "autobrava",
+    "mg56",
+    "musa",
+    "bravo",
+    "autoscout"
+   ],
+   "notify": {
+    "new": true,
+    "drop": true
+   },
+   "filters": {
+    "makes": [],
+    "model": "",
+    "year_min": null,
+    "year_max": null,
+    "price_min": null,
+    "price_max": 37000,
+    "watch_max": 40000,
+    "km_max": null,
+    "power_min": null,
+    "fuel": [
+     "phev"
+    ],
+    "drive": [
+     "awd"
+    ],
+    "gearbox": [],
+    "body": [],
+    "equipment": [],
+    "equipment_mode": "all",
+    "keywords": "",
+    "exclude": "",
+    "as_countries": [
+     "D"
+    ]
+   }
+  }
+ ]
+}
