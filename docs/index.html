@@ -293,6 +293,7 @@ footer { color: var(--muted); font-size: 14px; padding-bottom: 24px; }
   const fmtKm = (n) => Math.round(n / 1000).toLocaleString("lv-LV") + " tūkst. km";
   const state = { view: "all", sort: "price", source: "", over: false };
   let data = null;
+  let baseline = 0;   // agrākais atklāšanas laiks – pirmās pārskatīšanas brīdis
   const nodes = new Map();   // id -> <li>, lai kārtojot pārvietotu esošos elementus
 
   try {
@@ -308,7 +309,8 @@ footer { color: var(--muted); font-size: 14px; padding-bottom: 24px; }
     for (let i = h.length - 1; i > 0; i--) {
       if (h[i][1] < h[i - 1][1]) { prev = h[i - 1][1]; dropDate = h[i][0]; break; }
     }
-    c.isNew = daysAgo(c.first_seen) <= NEW_DAYS;
+    // auto, kas atrasti jau pirmajā pārskatīšanā, nav "jauni"
+    c.isNew = daysAgo(c.first_seen) <= NEW_DAYS && Date.parse(c.first_seen) - baseline > 2 * 3600000;
     c.isDrop = prev !== null && c.price < prev && daysAgo(dropDate) <= DROP_DAYS;
     c.prev = prev;
     c.over = c.price > data.max_price;
@@ -421,6 +423,7 @@ footer { color: var(--muted); font-size: 14px; padding-bottom: 24px; }
       const r = await fetch("data.json?t=" + Date.now(), { cache: "no-store" });
       if (!r.ok) throw new Error("HTTP " + r.status);
       data = await r.json();
+      baseline = Math.min(...data.cars.map((c) => Date.parse(c.first_seen) || Infinity));
       data.cars.forEach(enrich);
       const list = $("list");
       list.replaceChildren();
