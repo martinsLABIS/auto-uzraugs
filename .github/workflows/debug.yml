@@ -45,6 +45,7 @@ jobs:
         if: inputs.mode == 'finder'
         run: |
           mkdir -p debug_out
+          cp finder_state.json debug_out/ 2>/dev/null || true
           python -m finder.run 2>&1 | tee debug_out/log.txt
         env:
           DRY_RUN: "1"

@@ -186,9 +186,28 @@ def detect_gearbox(gear_text, full_text=""):
     return None
 
 
+# modeļi, kuru virsbūve ir zināma (izmanto, ja portāls virsbūvi nenorāda)
+MODEL_BODY = [
+    ("wagon", r"\bavant\b|touring|variant|\bv[679]0\b|\bkombi\b|\bcombi\b|estate|sports? ?tourer|allroad|"
+              r"cross country|shooting brake|\bsw\b|\bt-?modell\b|\bwagon\b|\bst\b"),
+    ("suv", r"\bq[2-8]\b|\bsq[5-8]\b|\bx[1-7]\b|\bix[13]?\b|\bxc ?[4-9]0\b|\bex[39]0\b|tiguan|touareg|t-?roc|"
+            r"t-?cross|taigo|id\.? ?[4-7]\b|atlas|teramont|ateca|tarraco|arona|formentor|terramar|kodiaq|karoq|kamiq|"
+            r"enyaq|elroq|kuga|puma|explorer|tucson|santa ?fe|kona|bayon|sportage|sorento|niro|\bev[59]\b|"
+            r"outlander|eclipse cross|asx|rav ?4|c-?hr|highlander|land cruiser|bz4x|cx-?[3-9]0?\b|"
+            r"\bgl[abceks]\b|\beq[abce] suv|macan|cayenne|\bnx\b|\brx\b|\bux\b|\bxc60\b|grandland|"
+            r"mokka|crossland|3008|5008|2008|c5 aircross|austral|kadjar|captur|arkana|duster|qashqai|x-?trail|"
+            r"juke|ariya|range rover|discovery|defender|evoque|velar|f-?pace|e-?pace|countryman|compass|"
+            r"renegade|wrangler|forester|outback|vitara|s-?cross|\bzs\b|\bhs\b|\bmodel [xy]\b"),
+]
+MODEL_BODY_RES = [(k, re.compile(p, re.I)) for k, p in MODEL_BODY]
+
+
 def detect_body(body_text, full_text=""):
     for src in (body_text or "", (full_text or "")[:400]):
         for key, rx in BODY_RES:
             if src and rx.search(src):
                 return key
+    for key, rx in MODEL_BODY_RES:
+        if rx.search((full_text or "")[:200]):
+            return key
     return None

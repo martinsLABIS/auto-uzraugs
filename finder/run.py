@@ -113,29 +113,38 @@ def terms(s):
     return [t.strip().lower() for t in re.split(r"[,;]", s or "") if t.strip()]
 
 
+REASONS = {}
+
+
+def why(c, reason):
+    """Pieraksta, kāpēc auto neatbilst (diagnostikai), un atgriež False."""
+    REASONS[reason.split("=")[0].split(" ")[0]] = REASONS.get(reason.split("=")[0].split(" ")[0], 0) + 1
+    return False
+
+
 def evaluate(c, f):
     """True – atbilst, False – neatbilst, None – jāatver sludinājums, lai izlemtu."""
     final = c["final"]
     price = c.get("price")
     watch = f.get("watch_max") or f.get("price_max")
     if not price or (watch and price > watch) or (f.get("price_min") and price < f["price_min"]):
-        return False
+        return why(c, "cena")
     for key, lo, hi in (("year", "year_min", "year_max"), ("km", None, "km_max")):
         v = c.get(key)
         if (lo and f.get(lo)) or (hi and f.get(hi)):
             if v is None:
                 if final:
-                    return False
+                    return why(c, f"{key} nav zināms")
                 return None
             if lo and f.get(lo) and v < f[lo]:
-                return False
+                return why(c, key)
             if hi and f.get(hi) and v > f[hi]:
-                return False
+                return why(c, key)
     if f.get("power_min") and c.get("power_kw") and c["power_kw"] < f["power_min"]:
         return False
     makes = [S.norm_make(m) for m in f.get("makes") or []]
     if makes and c.get("make") not in makes:
-        return False
+        return why(c, "marka")
     title = (c.get("title") or "").lower()
     models = terms(f.get("model"))
     if models and not any(m in title or m in c["full"][:300] for m in models):
@@ -152,13 +161,17 @@ def evaluate(c, f):
     if want and c.get("fuel") not in want:
         maybe = c.get("fuel") is None or (c.get("fuel") == "hybrid" and "phev" in want)
         if final or not maybe:
-            return False
+            return why(c, f"degviela={c.get('fuel')}")
         undecided = True
     for field in ("drive", "gearbox", "body"):
         want = f.get(field) or []
         if want and c.get(field) not in want:
-            if final or c.get(field) is not None:
-                return False
+            if c.get(field) is not None:
+                return why(c, f"{field}={c.get(field)}")
+            if final:
+                if field == "body":
+                    continue   # virsbūvi daudzi portāli nenorāda – šādus auto neizslēdzam
+                return why(c, f"{field} nav zināms")
             undecided = True
     req = f.get("equipment") or []
     if req:
@@ -166,7 +179,7 @@ def evaluate(c, f):
         need = len(req) if f.get("equipment_mode", "all") == "all" else max(1, -(-len(req) * 7 // 10))
         if have < need:
             if final:
-                return False
+                return why(c, f"aprīkojums {have}/{need}")
             undecided = True
     return None if undecided else True
 
@@ -292,6 +305,9 @@ def main():
         for s in searches:
             if key in st["searches"][s["id"]]["tracked"] and evaluate(c, s["filters"]):
                 matches[s["id"]][key] = c
+    if REASONS:
+        log("Biežākie iemesli, kāpēc auto neatbilst: " + ", ".join(
+            f"{k} {v}" for k, v in sorted(REASONS.items(), key=lambda x: -x[1])[:8]))
     log(f"Atvērti sludinājumi: {DETAIL_LIMIT - budget[0]} jauni, {min(len(todo), RECHECK_LIMIT)} pārbaudīti atkārtoti")
 
     # 4) izmaiņas, paziņojumi
