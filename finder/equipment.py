@@ -47,7 +47,7 @@ EQUIPMENT = [
     ("massage", "Masāžas sēdekļi", "seats",
      r"masāž|massage|массаж"),
     ("leather", "Ādas salons", "seats",
-     r"ādas (apdare|salon|sēdek|interjer|krēsl)|leather (seats?|upholstery|interior|trim|package)|full leather|"
+     r"ādas (apdare|salon|sēdek|interjer|krēsl)(?!\w*\s+(stūr|pārnesum|svir))|leather (seats?|upholstery|interior|trim|package)|full leather|"
      r"lederausstattung|ledersitze|vollleder|teilleder|nappa|vernasca|dakota|кожан\w* (салон|сиден)"),
     ("seven_seats", "7 sēdvietas", "seats",
      r"\b7 (sēdviet|vietas|vietīg|seats?|sitz)|7-seat|7-sitz|sieben sitz|7 мест|3\. sēdekļu rind|third row"),
