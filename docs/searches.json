@@ -43,6 +43,76 @@
      "D"
     ]
    }
+  },
+  {
+   "id": "smwwjli4n",
+   "name": "Ģimenes PHEV",
+   "active": true,
+   "sources": [
+    "ss",
+    "moller",
+    "autobrava",
+    "mg56",
+    "musa",
+    "bravo"
+   ],
+   "notify": {
+    "new": true,
+    "drop": true
+   },
+   "filters": {
+    "makes": [
+     "Audi",
+     "BMW",
+     "Volvo",
+     "Cupra",
+     "Volkswagen"
+    ],
+    "model": "",
+    "year_min": 2021,
+    "year_max": null,
+    "price_min": null,
+    "price_max": null,
+    "watch_max": null,
+    "km_max": 160000,
+    "power_min": null,
+    "fuel": [
+     "petrol",
+     "phev"
+    ],
+    "drive": [
+     "awd",
+     "rwd"
+    ],
+    "gearbox": [
+     "auto"
+    ],
+    "body": [
+     "suv",
+     "wagon"
+    ],
+    "equipment": [
+     "climate",
+     "keyless",
+     "tailgate",
+     "seat_heat",
+     "power_seats",
+     "leather",
+     "acc",
+     "rear_cam",
+     "park_sensors",
+     "led",
+     "matrix",
+     "carplay",
+     "towbar",
+     "roof_rails",
+     "air_susp"
+    ],
+    "equipment_mode": "most",
+    "keywords": "",
+    "exclude": "",
+    "as_countries": []
+   }
   }
  ]
 }
