@@ -80,7 +80,8 @@ SS_HINT_RE = re.compile(
 
 def classify(text, model=""):
     """Atgriež 'Plug-in 4x4', 'Elektro 4x4' vai None. model – marka/modelis no saites vai virsraksta."""
-    is_ev_model = bool(EV_MODEL_RE.search(model or text[:80]))
+    explicit_hybrid = bool(re.search(r"plug[\s-]?in|\bphev\b|hibr|hybrid", text, re.I))
+    is_ev_model = bool(EV_MODEL_RE.search(model or text[:80])) and not explicit_hybrid
     plugin = not is_ev_model and bool(PLUGIN_RE.search(text) or SKODA_IV_RE.search(text))
     awd = bool(AWD_RE.search(text)) or (plugin and bool(ALWAYS_AWD_RE.search(text)))
     if plugin and awd:
@@ -214,7 +215,10 @@ def moller_detail_text(url):
     soup = BeautifulSoup(r.text, "html.parser")
     main = soup.find(id="maincontent") or soup.find("main") or soup
     text = main.get_text(" ", strip=True)
-    return text.split("Biežāk uzdotie jautājumi")[0]
+    # lapas beigās ir citu auto kartītes – tās nedrīkst ietekmēt šī auto vērtējumu
+    for stop in ("Uzzināt vairāk", "Biežāk uzdotie jautājumi"):
+        text = text.split(stop)[0]
+    return text
 
 
 def scan_moller(state, found):
@@ -265,6 +269,11 @@ def ss_detail(url):
     parts = []
     box = soup.find(id="msg_div_msg")
     if box:
+        spec = box.find(id="msg_div_spec")
+        if spec:
+            # aprīkojuma sarakstā ir visas iespējamās opcijas; auto ir tikai treknrakstā atzīmētās
+            parts.append(" ".join(b.get_text(" ", strip=True) for b in spec.select("b.auto_c")))
+            spec.decompose()
         parts.append(box.get_text(" ", strip=True))
     else:   # rezerves variants: parametru šūnas un meta apraksts, bez lapas izvēlnēm
         parts += [td.get_text(" ", strip=True) for td in soup.select("td.ads_opt, td[id^=tdo_]")]
@@ -320,7 +329,7 @@ def scan_ss(state, found):
             if not prices or prices[0] > SCAN_MAX:
                 continue
             price = prices[0]
-            model = ss_title_from_url(link)
+            model = cells[3] if len(cells) >= 8 and cells[3] else ss_title_from_url(link)
             label = classify(row_text, model)
             if not label and SS_HINT_RE.search(row_text):
                 cached = state["checked"].get(key)
