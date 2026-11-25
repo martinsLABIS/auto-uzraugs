@@ -32,3 +32,11 @@ Biežumu maina `.github/workflows/auto-uzraugs.yml` rindā `cron`.
 ## Kā tiek atpazīts plug-in 4x4
 
 Pēc atslēgvārdiem sludinājuma tekstā: plug-in, PHEV, eHybrid, TFSI e, GTE, iV, Recharge, T8, 4xe, xDrive30e u. c. un pilnpiedziņa, 4x4, quattro, 4Motion, xDrive, 4Matic, AWD. Outlander PHEV, RAV4 plug-in, Volvo T8 u. c. tiek uzskatīti par 4x4 automātiski. Ja kāds auto paslīd garām vai pienāk lieks paziņojums – noteikumi ir `auto_monitor.py` sākumā (`PLUGIN_RE`, `AWD_RE`).
+
+## Lietotne telefonā
+
+Atrasto auto saraksts ir pieejams kā lietotne: https://martinslabis.github.io/auto-uzraugs/
+
+iPhone: atver saiti Safari → Kopīgot → „Pievienot sākuma ekrānam”. Android: Chrome izvēlnē → „Pievienot sākuma ekrānam”.
+
+Lietotnē var kārtot pēc cenas, gada vai nobraukuma, filtrēt pēc avota un skatīt tikai jaunos auto vai tos, kuriem samazinājusies cena. Saraksts atjaunojas kopā ar pārbaudi reizi stundā.

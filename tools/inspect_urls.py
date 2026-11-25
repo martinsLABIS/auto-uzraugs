@@ -4,7 +4,7 @@ sys.path.insert(0, ".")
 import auto_monitor as m
 out = []
 for u in os.getenv("URLS", "").split():
-    text, price = m.ss_detail(u)
+    text, price, _ = m.ss_detail(u)
     text = text or ""
     model = " ".join(u.split("/cars/")[-1].split("/")[:2]).replace("-", " ")
     out.append(f"== {m.classify(text, model)} | {price} | {u}")

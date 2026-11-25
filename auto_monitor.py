@@ -35,6 +35,7 @@ DEBUG = os.getenv("DEBUG", "0") == "1"
 DRY_RUN = os.getenv("DRY_RUN", "0") == "1"      # 1 = nesūtīt paziņojumus, tikai rakstīt žurnālā
 REPORT_FILE = os.getenv("REPORT_FILE", "")      # ja norādīts – saglabā atrasto auto sarakstu JSON
 STATE_FILE = Path(os.getenv("STATE_FILE", "state.json"))
+SITE_DIR = Path(os.getenv("SITE_DIR", "docs"))   # lietotnes dati (GitHub Pages)
 STATE_VERSION = 2   # palielina, ja mainās loģika – vecais stāvoklis tiek atmests
 FULL_SCAN = os.getenv("FULL_SCAN", "0") == "1"   # var kļūt True arī load_state() laikā
 SS_PAGES_NORMAL = int(os.getenv("SS_PAGES", "5"))
@@ -215,7 +216,13 @@ def moller_cards(soup):
         title = PRICE_RE.split(text)[0]
         title = re.sub(r"^(?:(?:Garantija|Jaunums|Akcija|Rezervēts)\s+)+", "", title).strip()
         title = re.sub(r"((?:19|20)\d{2}),.*$", r"\1", title)[:70]   # "Audi Q5 2023, 2.0 …" -> "Audi Q5 2023"
-        cards[cid] = {"id": cid, "title": title, "price": min(prices), "text": text,
+        year = re.search(r"\b((?:19|20)\d{2})\b", title)
+        km = re.search(r"(\d{1,3}(?:[\s\u00a0]\d{3})*)\s*km\b", text)
+        img = node.find("img", src=re.compile(r"/media/catalog/product/"))
+        name = re.sub(r"\s*\b(?:19|20)\d{2}$", "", title).strip()
+        cards[cid] = {"id": cid, "title": name or title, "year": year.group(1) if year else "",
+                      "km": re.sub(r"\D", "", km.group(1)) if km else "",
+                      "img": img["src"] if img else "", "price": min(prices), "text": text,
                       "url": f"https://mollerauto.lv/lv/{cid}.html"}
     return list(cards.values())
 
@@ -273,10 +280,10 @@ def scan_moller(state, found):
 
 # ------------------------------------------------------------------- ss.com
 def ss_detail(url):
-    """Atgriež (teksts, cena) vai (None, None), ja sludinājuma vairs nav."""
+    """Atgriež (teksts, cena, info) vai (None, None, {}), ja sludinājuma vairs nav."""
     r = get(url)
     if not r or "/msg/" not in r.url:
-        return None, None
+        return None, None, {}
     soup = BeautifulSoup(r.text, "html.parser")
     parts = []
     box = soup.find(id="msg_div_msg")
@@ -300,7 +307,20 @@ def ss_detail(url):
         prices = parse_prices(m.group(0)) if m else []
     title_el = soup.find("h2") or soup.find("title")
     title = title_el.get_text(" ", strip=True) if title_el else ""
-    return title + " " + text, (prices[0] if prices else None)
+    info = {}
+    for key, tid in (("year", "tdo_18"), ("km", "tdo_16"), ("model", "tdo_31")):
+        el = soup.find(id=tid)
+        if el:
+            info[key] = el.get_text(" ", strip=True)
+    if "year" in info:
+        m = re.search(r"(19|20)\d{2}", info["year"])
+        info["year"] = m.group(0) if m else ""
+    if info.get("km"):
+        info["km"] = re.sub(r"\D", "", info["km"])
+    img = re.search(r"https://i\.ss\.com/gallery/[^\"' ]+?\.(?:t|th2|800)\.jpg", r.text)
+    if img:
+        info["img"] = img.group(0)
+    return title + " " + text, (prices[0] if prices else None), info
 
 
 def ss_title_from_url(url):
@@ -346,16 +366,19 @@ def scan_ss(state, found):
             if not label and SS_HINT_RE.search(row_text):
                 cached = state["checked"].get(key)
                 if cached is None:
-                    text, _ = ss_detail(link)
+                    text, _, _ = ss_detail(link)
                     label = classify(row_text + " " + (text or ""), model)
                     dbg(f"  detaļas {link}: {label}")
                 else:
                     label = cached.get("label")
             state["checked"][key] = {"label": label, "ts": time.time()}
             if label:
-                title = model
                 year = next((c for c in cells if re.fullmatch(r"(19|20)\d{2}", c)), "")
-                found[key] = {"id": key, "title": f"{title} {year}".strip(), "price": price,
+                km_cell = next((c for c in cells if "tūkst" in c), "")
+                km = str(int(re.sub(r"\D", "", km_cell)) * 1000) if re.search(r"\d", km_cell) else ""
+                img = tr.find("img", src=re.compile(r"i\.ss\.com"))
+                found[key] = {"id": key, "title": model, "year": year, "km": km,
+                              "img": img["src"] if img else "", "price": price,
                               "url": link, "label": label, "source": "SS"}
         dbg(f"ss lapa {page}: {len(rows)} rindas, {page_new} jaunas")
         if page_new == 0:   # aiz pēdējās lapas ss.com rāda atkal pirmo
@@ -367,15 +390,40 @@ def scan_ss(state, found):
 def recheck_ss(state, found, seen):
     """Pārbauda zināmos ss.com auto, kas šoreiz nebija pārskatītajās lapās."""
     todo = [k for k in state["tracked"] if k.startswith("ss:") and k not in seen]
+    todo.sort(key=lambda k: state["tracked"][k].get("last_checked", ""))   # vispirms senāk pārbaudītie
     for key in todo[:SS_RECHECK_LIMIT]:
         car = state["tracked"][key]
-        text, price = ss_detail(car["url"])
+        text, price, info = ss_detail(car["url"])
         if text is None:
             log(f"  vairs nav: {car['title']}")
             state["tracked"].pop(key, None)
             continue
+        car["last_checked"] = now_iso()
+        upd = {k: v for k, v in info.items() if v and not car.get(k) and k != "model"}
         if price:
-            found[key] = {**car, "price": price}
+            found[key] = {**car, **upd, "price": price}
+
+
+# ------------------------------------------------------------ lietotnes dati
+def write_site_data(tracked):
+    """Ieraksta docs/data.json, ko nolasa lietotne (GitHub Pages)."""
+    if not SITE_DIR.exists():
+        return
+    cars = []
+    for key, c in tracked.items():
+        if c["price"] > SCAN_MAX:
+            continue
+        title, year = c["title"], c.get("year", "")
+        m = re.search(r"\s((?:19|20)\d{2})$", title)
+        if m:   # vecākos ierakstos gads bija nosaukumā
+            title, year = title[:m.start()], year or m.group(1)
+        cars.append({"id": key, "title": title, "year": year, "km": c.get("km", ""),
+                     "img": c.get("img", ""), "price": c["price"], "url": c["url"],
+                     "source": c["source"], "first_seen": c.get("first_seen", ""),
+                     "history": c.get("history", [])})
+    cars.sort(key=lambda c: c["price"])
+    data = {"updated": now_iso(), "max_price": MAX_PRICE, "scan_max": SCAN_MAX, "cars": cars}
+    (SITE_DIR / "data.json").write_text(json.dumps(data, ensure_ascii=False), "utf-8")
 
 
 # ------------------------------------------------------------- galvenā daļa
@@ -399,10 +447,20 @@ def main():
                 new_cars.append(car)
         elif car["price"] < prev["price"] and car["price"] <= MAX_PRICE:
             drops.append((car, prev["price"]))
-        tracked[key] = {"title": car["title"], "price": car["price"], "url": car["url"],
-                        "label": car["label"], "source": car["source"],
-                        "first_seen": prev["first_seen"] if prev else now_iso(),
-                        "last_seen": now_iso()}
+        history = list(prev.get("history", [])) if prev else []
+        if not history and prev:
+            history = [[prev.get("first_seen", now_iso())[:10], prev["price"]]]
+        if not history or history[-1][1] != car["price"]:
+            history.append([now_iso()[:10], car["price"]])
+        entry = {"title": car["title"], "price": car["price"], "url": car["url"],
+                 "label": car["label"], "source": car["source"], "history": history[-20:],
+                 "first_seen": prev["first_seen"] if prev else now_iso(),
+                 "last_seen": now_iso()}
+        for extra in ("year", "km", "img", "last_checked"):
+            val = car.get(extra) or (prev or {}).get(extra)
+            if val:
+                entry[extra] = val
+        tracked[key] = entry
 
     # Moller auto, kas vairs nav sarakstā (pārdoti) – izņem no uzraudzības
     if moller_ok:
@@ -414,22 +472,24 @@ def main():
     log(f"Atbilst: {len(matching)} | jauni: {len(new_cars)} | cenas kritumi: {len(drops)}")
 
     if silent:
-        lines = [f"{c['title']} – {fmt_price(c['price'])}\n{c['url']}" for c in matching[:12]]
+        lines = [f"{c['title']} {c.get('year', '')} – {fmt_price(c['price'])}\n{c['url']}".replace("  ", " ")
+                 for c in matching[:12]]
         more = f"\n\n… un vēl {len(matching) - 12}" if len(matching) > 12 else ""
         notify("Auto uzraugs darbojas",
                f"Atradu {len(matching)} plug-in 4x4 līdz {fmt_price(MAX_PRICE)}.\n\n"
                + "\n\n".join(lines) + more, tags=["white_check_mark"])
     else:
         for c in new_cars:
-            notify(f"Jauns: {c['title']}",
+            notify(f"Jauns: {c['title']} {c.get('year', '')}".strip(),
                    f"{fmt_price(c['price'])} · {c['label']} · {c['source']}",
                    url=c["url"], tags=["car"], priority=4)
         for c, old in drops:
-            notify(f"Cena samazināta: {c['title']}",
+            notify(f"Cena samazināta: {c['title']} {c.get('year', '')}".strip(),
                    f"{fmt_price(old)} → {fmt_price(c['price'])} (−{fmt_price(old - c['price'])}) "
                    f"· {c['source']}",
                    url=c["url"], tags=["chart_with_downwards_trend"], priority=4)
 
+    write_site_data(tracked)
     if REPORT_FILE:
         Path(REPORT_FILE).write_text(json.dumps(
             {"matching": matching, "found_all": list(found.values())},
